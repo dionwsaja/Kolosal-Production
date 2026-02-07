@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-
-// logo imports
 import bumn from "../../assets/logo/marque/bumn.png";
 import kemenbud from "../../assets/logo/marque/kemenbud.png";
 import intac from "../../assets/logo/marque/intac.png";

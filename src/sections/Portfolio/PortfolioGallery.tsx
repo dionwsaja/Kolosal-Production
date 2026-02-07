@@ -2,11 +2,6 @@ interface PortfolioGalleryProps {
   folder: string;
 }
 
-/**
- * Khusus UI:
- * index = urutan gambar (1.jpg, 2.jpg, ...)
- * value = link website
- */
 const uiLinks: Record<number, string> = {
   1: "https://profitara.vercel.app/",
   2: "https://minimiwaste.vercel.app/",
@@ -26,8 +21,8 @@ const PortfolioGallery = ({ folder }: PortfolioGalleryProps) => {
       const match = path.match(/\/(\d+)\.(jpg|jpeg|png|webp)$/i);
       const order = match ? Number(match[1]) : 0;
 
-      // @ts-expect-error vite glob
-      const src = imageModules[path].default;
+      
+      const src = (imageModules[path] as { default: string }).default;
 
       return { path, src, order };
     })

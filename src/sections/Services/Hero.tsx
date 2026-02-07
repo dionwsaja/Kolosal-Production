@@ -1,4 +1,3 @@
-// import React from "react";
 import { SparklesCore } from "../../components/ui/sparkles";
 
 export function Hero() {

@@ -6,33 +6,43 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const WORKFLOW = [
   {
     step: "01",
-    title: "Initial Inquiry",
-    desc: "Client reaches out to discuss needs, goals, and project scope.",
+    title: "Konsultasi Kebutuhan & Penyelarasan Konsep",
+    desc: "Pengajuan kebutuhan dan konsultasi konsep untuk menyelaraskan alur kerja serta referensi proyek antara klien dan tim Kolosal.",
   },
   {
     step: "02",
-    title: "Creative Discussion",
-    desc: "We explore ideas, references, and creative direction together.",
+    title: "Penawaran Resmi & Kesepakatan Kerja Sama",
+    desc: "Pemberian quotation resmi yang dilanjutkan dengan pengajuan brief detail dan penandatanganan kesepakatan kerja sama (MoU).",
   },
   {
     step: "03",
-    title: "Proposal & Planning",
-    desc: "We define timeline, deliverables, and execution strategy.",
+    title: "Pembayaran Termin Awal (Down Payment)",
+    desc: "Pembayaran termin pertama (DP) melalui invoice dengan pilihan skema fleksibel.",
   },
   {
     step: "04",
-    title: "Production Phase",
-    desc: "Our team executes visuals, digital assets, or content production.",
+    title: "Pelaksanaan Produksi (Hari-H)",
+    desc: "Eksekusi produksi pada hari-H oleh tim profesional Kolosal sesuai dengan konsep yang telah disepakati.",
   },
   {
     step: "05",
-    title: "Review & Refinement",
-    desc: "Client feedback is applied to refine the final output.",
+    title: "Pelunasan Pembayaran Akhir",
+    desc: "Pelunasan tagihan akhir sesuai skema sebelum memasuki tahap akhir.",
   },
   {
     step: "06",
-    title: "Final Delivery",
-    desc: "Project is finalized and delivered ready for real-world use.",
+    title: "Tahap Pasca-Produksi",
+    desc: "Proses pasca-produksi dengan estimasi pengerjaan [X] hari kerja sebelum hasil pertama diberikan kepada klien.",
+  },
+  {
+    step: "07",
+    title: "Review & Revisi Klien",
+    desc: "Peninjauan hasil karya (review) oleh klien dengan batas maksimal 2x revisi (revisi tambahan akan dikenakan biaya).",
+  },
+  {
+    step: "08",
+    title: "Serah Terima Aset Akhir",
+    desc: "Penyerahan seluruh aset akhir (soft file/hard file) melalui media yang disepakati sebagai tanda selesainya proyek secara resmi.",
   },
 ];
 
@@ -57,9 +67,9 @@ const Workflow = () => {
         {/* HEADER */}
         <div className="mb-14 flex items-center justify-between">
           <div>
-            <h2 className="text-4xl font-bold text-white">
+            <span className="gradient-text text-5xl font-bold text-white">
               Our Workflow
-            </h2>
+            </span>
             <p className="mt-3 max-w-xl text-white/60">
               A clear, structured process to ensure every project runs smoothly
               from idea to execution.
@@ -129,8 +139,6 @@ const Workflow = () => {
 };
 
 export default Workflow;
-
-/* ================= CARD ================= */
 
 const WorkflowCard = ({
   step,

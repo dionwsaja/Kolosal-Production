@@ -37,7 +37,6 @@ const WhyKolosal = () => {
   return (
     <section className="w-full bg-[#00030D] py-36">
       <div className="mx-auto max-w-7xl px-4">
-        {/* Header */}
         <div className="mb-14 w-full flex flex-col justify-center items-center text-center ">
           <span className="text-3xl md:text-4xl font-bold gradient-text tracking-tight text-white">
             Why Kolosal Production

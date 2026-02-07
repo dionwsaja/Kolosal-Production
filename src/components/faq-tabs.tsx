@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { useState, type HTMLAttributes } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { cn } from "../lib/utils";
+
+interface FAQItemData {
+  question: string;
+  answer: string;
+}
+
+interface FAQProps extends HTMLAttributes<HTMLElement> {
+  title?: string;
+  subtitle?: string;
+  categories: Record<string, string>;
+  faqData: Record<string, FAQItemData[]>;
+}
 
 export const FAQ = ({
   title = "FAQs",
@@ -10,7 +22,7 @@ export const FAQ = ({
   faqData,
   className,
   ...props
-}) => {
+}: FAQProps) => {
   const categoryKeys = Object.keys(categories);
   const [selectedCategory, setSelectedCategory] = useState(categoryKeys[0]);
 
@@ -33,14 +45,20 @@ export const FAQ = ({
   );
 };
 
-const FAQHeader = ({ title }) => (
+const FAQHeader = ({ title }: { title: string }) => (
   <div className="relative pt-36 z-10 flex flex-col items-center justify-center">
     <span className="mb-8 text-5xl font-bold gradient-text">{title}</span>
     {/* <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" /> */}
   </div>
 );
 
-const FAQTabs = ({ categories, selected, setSelected }) => (
+interface FAQTabsProps {
+  categories: Record<string, string>;
+  selected: string;
+  setSelected: (category: string) => void;
+}
+
+const FAQTabs = ({ categories, selected, setSelected }: FAQTabsProps) => (
   <div className="relative z-10 flex flex-wrap items-center justify-center gap-4">
     {Object.entries(categories).map(([key, label]) => (
       <button
@@ -70,7 +88,12 @@ const FAQTabs = ({ categories, selected, setSelected }) => (
   </div>
 );
 
-const FAQList = ({ faqData, selected }) => (
+interface FAQListProps {
+  faqData: Record<string, FAQItemData[]>;
+  selected: string;
+}
+
+const FAQList = ({ faqData, selected }: FAQListProps) => (
   <div className="mx-auto mt-12 max-w-5xl">
     <AnimatePresence mode="wait">
       {Object.entries(faqData).map(([category, questions]) => {
@@ -96,7 +119,7 @@ const FAQList = ({ faqData, selected }) => (
   </div>
 );
 
-const FAQItem = ({ question, answer }) => {
+const FAQItem = ({ question, answer }: FAQItemData) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

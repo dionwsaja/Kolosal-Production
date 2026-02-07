@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PortfolioGallery from "../sections/Portfolio/PortfolioGallery";
-import QR from "../sections/Portfolio/qr";
+import QR from "../sections/Portfolio/QR";
 
 const tabs = [
   { key: "event", label: "Event Documentation" },

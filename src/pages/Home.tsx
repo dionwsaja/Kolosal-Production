@@ -1,4 +1,3 @@
-// import Hero from "../sections/Home/Hero";
 import CoreServices from "../sections/Home/CoreServices";
 import Testimonials from "../sections/Home/Testimonials";
 import { ValueProposition } from "../sections/Home/ValueProposition";
@@ -8,7 +7,6 @@ import {Demo} from "../sections/Home/Demo";
 const Home = () => {
   return (
     <div className="bg-[#00030D]">
-      {/* <Hero /> */}
       <Demo/>
       <CoreServices />
       <ValueProposition></ValueProposition>

@@ -130,6 +130,7 @@ const Accordion = () => {
         subtitle="Let's answer some questions"
         categories={categories}
         faqData={faqData}
+        className=""
       />
     </div>
   );
