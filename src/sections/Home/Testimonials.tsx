@@ -73,7 +73,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-135 mx-auto"
         >
-          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter pt-4 gradient-text mt-5">
+          <span className="text-3xl md:text-5xl font-bold tracking-tighter pt-4 gradient-text mt-5">
             What our users say
           </span>
           <p className="text-center mt-5 opacity-75">

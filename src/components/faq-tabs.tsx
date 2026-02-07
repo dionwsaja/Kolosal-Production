@@ -29,7 +29,7 @@ export const FAQ = ({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-[#00030D] px-4 py-12 text-foreground",
+        "relative overflow-hidden bg-[#00030D] px-4 py-12 text-foreground text-3xl md:text-5xl text-center",
         className,
       )}
       {...props}
@@ -47,8 +47,7 @@ export const FAQ = ({
 
 const FAQHeader = ({ title }: { title: string }) => (
   <div className="relative pt-36 z-10 flex flex-col items-center justify-center">
-    <span className="mb-8 text-5xl font-bold gradient-text">{title}</span>
-    {/* <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" /> */}
+    <span className="mb-8 text-3xl md:text-5xl font-bold gradient-text">{title}</span>
   </div>
 );
 

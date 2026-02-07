@@ -1,19 +1,14 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useForm } from "@formspree/react";
 
 const ContactSection = () => {
+  const [state, handleSubmit] = useForm("mykdypwy");
+
   return (
-    <section className="w-full bg-transparent  px-4 py-8   ">
-      <div
-        className="
-          mx-auto
-          max-w-7xl 
-          rounded-3xl
-          border border-white/10
-          bg-transparent
-          backdrop-blur-md
-        "
-      >
+    <section className="w-full bg-transparent px-4 py-8">
+      <div className="mx-auto max-w-7xl rounded-3xl border border-white/10 bg-transparent backdrop-blur-md">
         <div className="grid grid-cols-1 md:grid-cols-2">
+       
           <div className="p-8 md:p-14">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
               Get in touch
@@ -26,11 +21,11 @@ const ContactSection = () => {
             </p>
 
             <div className="mt-12 space-y-6">
-              <a 
+              <a
                 href="mailto:kolosalproduction@gmail.com"
                 className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-transform group-hover:scale-110">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform">
                   <Mail className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -41,13 +36,13 @@ const ContactSection = () => {
                 </div>
               </a>
 
-              <a 
-                href="https://wa.me/6287836634378" 
-                className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20" 
-                target="_blank" 
+              <a
+                href="https://wa.me/6287836634387"
+                target="_blank"
                 rel="noopener noreferrer"
-              > 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-transform group-hover:scale-110">
+                className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform">
                   <Phone className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -62,40 +57,30 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-transform group-hover:scale-110">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform">
                   <MapPin className="h-5 w-5 text-white" />
                 </div>
                 <div>
                   <div className="text-sm text-white/50">Address</div>
-                  <div className="text-white">
-                    Jakarta, Indonesia
-                  </div>
+                  <div className="text-white">Jakarta, Indonesia</div>
                 </div>
               </a>
             </div>
           </div>
 
-          {/* RIGHT - FORM */}
+         
           <div className="border-t md:border-t-0 md:border-l border-white/10 p-8 md:p-14">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="mb-2 block text-sm text-white/70">
                   Name
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   placeholder="Your name"
-                  className="
-                    w-full
-                    rounded-xl
-                    border border-white/10
-                    bg-black/60
-                    px-4 py-3
-                    text-white
-                    outline-none
-                    transition
-                    focus:border-white/30
-                  "
+                  className="w-full rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-white outline-none focus:border-white/30"
                 />
               </div>
 
@@ -105,18 +90,10 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   placeholder="you@email.com"
-                  className="
-                    w-full
-                    rounded-xl
-                    border border-white/10
-                    bg-transparent
-                    px-4 py-3
-                    text-white
-                    outline-none
-                    transition
-                    focus:border-white/30
-                  "
+                  className="w-full rounded-xl border border-white/10 bg-transparent px-4 py-3 text-white outline-none focus:border-white/30"
                 />
               </div>
 
@@ -126,18 +103,9 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="text"
+                  name="phone"
                   placeholder="+62..."
-                  className="
-                    w-full
-                    rounded-xl
-                    border border-white/10
-                    bg-transparent
-                    px-4 py-3
-                    text-white
-                    outline-none
-                    transition
-                    focus:border-white/30
-                  "
+                  className="w-full rounded-xl border border-white/10 bg-transparent px-4 py-3 text-white outline-none focus:border-white/30"
                 />
               </div>
 
@@ -146,39 +114,34 @@ const ContactSection = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  required
                   rows={5}
                   placeholder="Tell us about your project..."
-                  className="
-                    w-full
-                    resize-none
-                    rounded-xl
-                    border border-white/10
-                    bg-transparent
-                    px-4 py-3
-                    text-white
-                    outline-none
-                    transition
-                    focus:border-white/30
-                  "
+                  className="w-full resize-none rounded-xl border border-white/10 bg-transparent px-4 py-3 text-white outline-none focus:border-white/30"
                 />
               </div>
 
               <button
                 type="submit"
-                className="
-                  w-full
-                  rounded-xl
-                  bg-white
-                  py-3
-                  font-medium
-                  text-black
-                  transition
-                  hover:bg-white/90
-                  cursor-pointer
-                "
+                disabled={state.submitting}
+                className="w-full rounded-xl bg-white py-3 font-medium text-black transition hover:bg-white/90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit
+                {state.submitting ? "Sending..." : "Submit"}
               </button>
+
+           
+              {state.succeeded && (
+                <p className="text-sm font-medium text-green-500">
+                   Message Succesfully sent
+                </p>
+              )}
+
+              {state.errors && Array.isArray(state.errors) && state.errors.length > 0 && (
+                <p className="text-sm font-medium text-red-500">
+                 Failed to send message. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>

@@ -10,16 +10,16 @@ export function Hero() {
           minSize={0.6}
           maxSize={1.4}
           particleDensity={100}
-          className="w-full h-full"
+          className="w-full h-full opac"
           particleColor="#f7d07f"
           speed={0.5}
         />
       </div>
       <div className="flex flex-col items-center justify-center gap-4 relative z-20">
-        <h1 className="md:text-7xl text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#f7d07f] to-[#6c4120]">
+        <h1 className="md:text-7xl text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#f7d07f] to-[#6c4120]">
           Our Services
         </h1>
-        <p className="text-neutral-300 cursor-default text-center">
+        <p className="text-white/60 cursor-default text-center">
           From idea to Impact
         </p>
       </div>

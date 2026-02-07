@@ -30,16 +30,16 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/0" />
       <div ref={ref} className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-center">
-          <span className="text-4xl md:text-7xl font-bold leading-tight max-w-4xl gradient-text">
+          <span className="text-3xl md:text-7xl font-bold leading-tight max-w-4xl gradient-text">
             Turning Ideas Into <br /> Visual Works That Matter
           </span>
-          <p className="mt-6 text-lg md:text-xl text-white/60 max-w-5xl">
+          <p className="mt-6 text-md md:text-xl text-white/60 max-w-5xl">
             Kolosal Production is a creative partner for brands, events, and
             individuals who value meaning behind every visual. Backed by real
             field experience across national-scale projects, we craft visuals
             that don’t just look good, but represent identity with purpose.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-10 flex flex-col md:flex-row gap-4">
             <Link
               to="/services"
               className="relative inline-block rounded-full p-0.5

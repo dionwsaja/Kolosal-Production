@@ -21,13 +21,12 @@ const Portfolio = () => {
             Selected works based on our services
           </p>
         </div>
-
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4  gap-3 mb-12">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-4 py-2 rounded-md text-sm transition
+              className={`px-4 py-2 rounded-md text-sm transition 
                 ${
                   activeTab === tab.key
                     ? "bg-linear-to-r  from-[#f7d07f] to-[#f7d07f]/60 text-white"

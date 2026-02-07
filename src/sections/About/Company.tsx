@@ -1,4 +1,4 @@
-import bg from "../../assets/images/bg_1.png";
+import bg from "../../assets/images/Portfolio/event/20.jpg";
 
 const points = [
   {
@@ -32,12 +32,9 @@ export default function Company() {
             />
             <div className="absolute inset-0 bg-black/30" />
           </div>
-
-     
           <div className="flex flex-col gap-10">
-
-            <div className="space-y-4">
-              <p className="text-xs font-semibold tracking-widest text-white/50 uppercase">
+            <div className="space-y-4 w-full">
+              <p className="text-3xl md:text-5xl gradient-text font-semibold  text-center md:text-left">
                 Who We Are
               </p>
               <h2 className="text-3xl font-semibold leading-tight text-white md:text-4xl">

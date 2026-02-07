@@ -6,52 +6,52 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const WORKFLOW = [
   {
     step: "01",
-    title: "Konsultasi Kebutuhan & Penyelarasan Konsep",
-    desc: "Pengajuan kebutuhan dan konsultasi konsep untuk menyelaraskan alur kerja serta referensi proyek antara klien dan tim Kolosal.",
+    title: "Project Requirement Submission & Concept Alignment",
+    desc: "Submission of requirements and concept consultation to align workflows and project references between the client and the Kolosal team.",
   },
   {
     step: "02",
-    title: "Penawaran Resmi & Kesepakatan Kerja Sama",
-    desc: "Pemberian quotation resmi yang dilanjutkan dengan pengajuan brief detail dan penandatanganan kesepakatan kerja sama (MoU).",
+    title: "Quotation Issuance & Agreement Formalization (MoU)",
+    desc: "Provision of an official quotation followed by the submission of a detailed brief and the signing of a memorandum of understanding (MoU).",
   },
   {
     step: "03",
-    title: "Pembayaran Termin Awal (Down Payment)",
-    desc: "Pembayaran termin pertama (DP) melalui invoice dengan pilihan skema fleksibel.",
+    title: "Initial Payment & Project Confirmation",
+    desc: "Payment of the first installment (DP) via invoice with flexible payment options.",
   },
   {
     step: "04",
-    title: "Pelaksanaan Produksi (Hari-H)",
-    desc: "Eksekusi produksi pada hari-H oleh tim profesional Kolosal sesuai dengan konsep yang telah disepakati.",
+    title: "Production Execution",
+    desc: "Production execution on the appointed day by Kolosal's professional team in accordance with the agreed concept.",
   },
   {
     step: "05",
-    title: "Pelunasan Pembayaran Akhir",
-    desc: "Pelunasan tagihan akhir sesuai skema sebelum memasuki tahap akhir.",
+    title: "Final Payment Settlement",
+    desc: "Final payment settlement according to the scheme before entering the final stage.",
   },
   {
     step: "06",
-    title: "Tahap Pasca-Produksi",
-    desc: "Proses pasca-produksi dengan estimasi pengerjaan [X] hari kerja sebelum hasil pertama diberikan kepada klien.",
+    title: "Post-Production Process",
+    desc: "Post-production process with an estimated [X] working days before the first results are delivered to the client..",
   },
   {
     step: "07",
-    title: "Review & Revisi Klien",
-    desc: "Peninjauan hasil karya (review) oleh klien dengan batas maksimal 2x revisi (revisi tambahan akan dikenakan biaya).",
+    title: "Client Review & Revision Phase",
+    desc: "Review of the work by the client with a maximum of 2 revisions (additional revisions will incur additional costs).",
   },
   {
     step: "08",
-    title: "Serah Terima Aset Akhir",
-    desc: "Penyerahan seluruh aset akhir (soft file/hard file) melalui media yang disepakati sebagai tanda selesainya proyek secara resmi.",
+    title: "Final Asset Delivery & Project Completion",
+    desc: "Delivery of all final assets (soft files/hard files) via the agreed medium as a sign of the official completion of the project.",
   },
 ];
 
-const CARD_WIDTH = 320; // px (penting buat geser 1 card pas)
+const CARD_WIDTH = 320; 
 
 const Workflow = () => {
   const [index, setIndex] = useState(0);
 
-  const maxIndex = WORKFLOW.length - 3; // karena md tampil 3 card
+  const maxIndex = WORKFLOW.length - 3; 
 
   const prev = () => {
     setIndex((prev) => Math.max(prev - 1, 0));
@@ -62,21 +62,19 @@ const Workflow = () => {
   };
 
   return (
-    <section className="w-full bg-[#00030D] py-28 px-4">
-      <div className="mx-auto max-w-7xl">
-        {/* HEADER */}
-        <div className="mb-14 flex items-center justify-between">
+    <section className="w-full bg-[#00030D] py-36">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="mb-14 flex text-center md:text-left items-center justify-between">
           <div>
             <span className="gradient-text text-5xl font-bold text-white">
               Our Workflow
             </span>
-            <p className="mt-3 max-w-xl text-white/60">
+            <p className="mt-3 max-w-sm md:max-w-xl text-white/60">
               A clear, structured process to ensure every project runs smoothly
               from idea to execution.
             </p>
           </div>
 
-          {/* NAV (desktop only) */}
           <div className="hidden md:flex gap-3">
             <button
               onClick={prev}
@@ -107,14 +105,12 @@ const Workflow = () => {
           </div>
         </div>
 
-        {/* MOBILE GRID */}
         <div className="grid grid-cols-2 gap-4 md:hidden">
           {WORKFLOW.map((item) => (
             <WorkflowCard key={item.step} {...item} />
           ))}
         </div>
 
-        {/* DESKTOP CAROUSEL */}
         <div className="relative hidden md:block overflow-hidden">
           <div
             className="flex gap-6 transition-transform duration-500 ease-out"

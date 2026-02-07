@@ -6,7 +6,7 @@ export function ValueProposition() {
   return (
     <div className="max-w-7xl mx-auto pt-36 px-4">
       <div className="text-center flex flex-col items-center gap-y-4">
-        <span className="gradient-text text-5xl font-bold">
+        <span className="gradient-text text-3xl md:text-5xl font-bold">
           Our Value Propositions
         </span>
         <p className="text-white/60 max-w-xl">

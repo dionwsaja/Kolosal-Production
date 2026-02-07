@@ -4,7 +4,6 @@ const Contact = () => {
   return (
     <div>
       <Hero></Hero>
-      
     </div>
   );
 };
