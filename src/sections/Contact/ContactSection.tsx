@@ -1,0 +1,190 @@
+import { Mail, Phone, MapPin } from "lucide-react";
+
+const ContactSection = () => {
+  return (
+    <section className="w-full bg-transparent  px-4 py-8   ">
+      <div
+        className="
+          mx-auto
+          max-w-7xl 
+          rounded-3xl
+          border border-white/10
+          bg-transparent
+          backdrop-blur-md
+        "
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="p-8 md:p-14">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
+              Get in touch
+            </h2>
+
+            <p className="mt-6 max-w-md text-white/65 leading-relaxed">
+              If you have any questions regarding our services or need help,
+              please fill out the form here. We do our best to respond within
+              one business day.
+            </p>
+
+            <div className="mt-12 space-y-6">
+              <a 
+                href="mailto:kolosalproduction@gmail.com"
+                className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-transform group-hover:scale-110">
+                  <Mail className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm text-white/50">Email</div>
+                  <div className="text-white">
+                    kolosalproduction@gmail.com
+                  </div>
+                </div>
+              </a>
+
+              <a 
+                href="https://wa.me/6287836634378" 
+                className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              > 
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-transform group-hover:scale-110">
+                  <Phone className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm text-white/50">Phone / Whatsapp</div>
+                  <div className="text-white">+62 878-3663-4378</div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.google.com/maps/search/Jakarta,+Indonesia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-transform group-hover:scale-110">
+                  <MapPin className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm text-white/50">Address</div>
+                  <div className="text-white">
+                    Jakarta, Indonesia
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT - FORM */}
+          <div className="border-t md:border-t-0 md:border-l border-white/10 p-8 md:p-14">
+            <form className="space-y-6">
+              <div>
+                <label className="mb-2 block text-sm text-white/70">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="
+                    w-full
+                    rounded-xl
+                    border border-white/10
+                    bg-black/60
+                    px-4 py-3
+                    text-white
+                    outline-none
+                    transition
+                    focus:border-white/30
+                  "
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm text-white/70">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="you@email.com"
+                  className="
+                    w-full
+                    rounded-xl
+                    border border-white/10
+                    bg-transparent
+                    px-4 py-3
+                    text-white
+                    outline-none
+                    transition
+                    focus:border-white/30
+                  "
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm text-white/70">
+                  Phone
+                </label>
+                <input
+                  type="text"
+                  placeholder="+62..."
+                  className="
+                    w-full
+                    rounded-xl
+                    border border-white/10
+                    bg-transparent
+                    px-4 py-3
+                    text-white
+                    outline-none
+                    transition
+                    focus:border-white/30
+                  "
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm text-white/70">
+                  Message
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder="Tell us about your project..."
+                  className="
+                    w-full
+                    resize-none
+                    rounded-xl
+                    border border-white/10
+                    bg-transparent
+                    px-4 py-3
+                    text-white
+                    outline-none
+                    transition
+                    focus:border-white/30
+                  "
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="
+                  w-full
+                  rounded-xl
+                  bg-white
+                  py-3
+                  font-medium
+                  text-black
+                  transition
+                  hover:bg-white/90
+                  cursor-pointer
+                "
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
