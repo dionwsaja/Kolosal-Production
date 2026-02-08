@@ -29,7 +29,7 @@ export const FAQ = ({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-[#00030D] px-4 py-12 text-foreground text-3xl md:text-5xl text-center",
+        "relative overflow-hidden bg-[#00030D] px-4 py-12 text-foreground",
         className,
       )}
       {...props}
