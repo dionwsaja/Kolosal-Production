@@ -6,7 +6,7 @@ const ContactSection = () => {
 
   return (
     <section className="w-full bg-transparent px-4 py-8">
-      <div className="mx-auto max-w-7xl rounded-3xl border border-white/10 bg-transparent backdrop-blur-md">
+      <div className="mx-auto max-w-7xl rounded-3xl border border-white/20 bg-transparent backdrop-blur-md">
         <div className="grid grid-cols-1 md:grid-cols-2">
        
           <div className="p-8 md:p-14">
