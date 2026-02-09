@@ -20,7 +20,7 @@ export function Hero() {
           About Us
         </h1>
         <p className="text-white/60 cursor-default text-center">
-          is brighter than you think
+          Our Background
         </p>
       </div>
     </div>
