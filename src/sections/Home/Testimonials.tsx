@@ -11,13 +11,13 @@ const testimonials = [
   {
     text: "Untuk Kolosal Production Sukses terus menginspirasi dan terus membuat karya karya film yang tentu saja bermanfaat dan berdampak untuk bangsa dan bernegara",
     image: "https://yt3.googleusercontent.com/ytc/AIdro_nyGkM47YI5Jgb9QwJ3Eo5vU737EJY78lHwX1GEIKDM-EY=s900-c-k-c0x00ffffff-no-rj",
-    name: "Andri Senopati",
+    name: "Tsamara Amany",
     role: "Content Creator",
   },
   {
-    text: "Menurut GUEEE okee dieee,die NYAmpe ,die ENNjoyyy,kerjanya MANteppp,fotonya BAGuss,Videonya KERENNN. MENURUT GUA MINIMAL Orang WAJIB Et Least sekali pake Kolosal Production untuk jadi Vendornya Mereka yaaa. COBAINNN AJ DLUUU",
+    text: "Menurut GUEEE okee dieee,die NYAmpe ,die ENNjoyyy,kerjanya MANteppp,fotonya BAGuss,Videonya KERENNN. MENURUT GUA MINIMAL Orang WAJIB at Least sekali pake Kolosal Production untuk jadi Vendornya Mereka yaaa. COBAINNN AJA DLUUU",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEZnluxCImM4a70REtabYWLAwve1m36GzSGA&s  ",
-    name: "Saman Malik",
+    name: "Andri Senopati",
     role: "Content Creator",
   },
   {
@@ -65,7 +65,7 @@ const testimonials = [
   {
     text: "Happy bangettt karena hasil video dan fotonya bagusss. Jadi kalo temen teman butuh rekomendasi bikin hasil foto video yang bagus yangg OKEE dan pastinya bakal ngarahin juga.Langsung aja hubungin Kolosal Production.",
     image: "https://media.licdn.com/dms/image/v2/D5603AQFKhhxDdklrzA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1705341024555?e=2147483647&v=beta&t=B8MFsGMcOozql44SgP9B7V-s8DZst8ml2gM9-dSGV2I",
-    name: "Salmahit Attaya",
+    name: "Salmahita Attaya",
     role: "Content Creator",
   },
   {
