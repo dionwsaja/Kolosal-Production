@@ -11,126 +11,124 @@ const Accordion = () => {
   const faqData = {
     EventDocumentation: [
       {
-        question: "What is web development?",
+        question: "Jenis event apa saja yang bisa ditangani Kolosal?",
         answer:
-          "Web development is the process of building and maintaining websites. It involves a combination of client-side and server-side programming, database management, and other web-related technologies.",
+          "Kami menangani berbagai jenis event seperti acara korporat, brand activation, konferensi, konser, pameran, hingga acara privat dengan standar produksi profesional.",
       },
       {
-        question:
-          "What programming languages are essential for web development?",
+        question: "Apakah konsep visual event bisa disesuaikan?",
         answer:
-          "Essential languages for web development include HTML, CSS, and JavaScript for front-end development. For back-end development, popular languages include Python, Ruby, PHP, Java, and Node.js.",
+          "Bisa. Gaya visual, storytelling, hingga tone dokumentasi dapat disesuaikan dengan identitas brand dan tujuan event Anda.",
       },
       {
-        question:
-          "What's the difference between front-end and back-end development?",
+        question: "Apakah Kolosal menyediakan foto dan video sekaligus?",
         answer:
-          "Front-end development focuses on the user interface and user experience of a website, while back-end development deals with server-side logic, databases, and application integration.",
+          "Ya. Kami menyediakan paket dokumentasi foto, video, maupun kombinasi keduanya sesuai kebutuhan.",
       },
       {
-        question: "How long does it typically take to develop a website?",
+        question: "Berapa lama proses pengerjaan setelah event selesai?",
         answer:
-          "The time to develop a website can vary greatly depending on its complexity. A simple static website might take a few days, while a complex web application could take several months or even years.",
+          "Proses post-production biasanya memakan waktu sekitar 7–14 hari kerja, tergantung kompleksitas proyek.",
       },
       {
-        question: "What is responsive web design?",
+        question: "Apakah Kolosal bisa menangani event luar kota?",
         answer:
-          "Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It ensures that websites are accessible and visually appealing across different platforms.",
+          "Ya. Tim kami siap menangani event di luar kota dengan perencanaan dan jadwal yang disepakati.",
       },
     ],
+
     personalDemand: [
       {
-        question: "What is mobile development?",
+        question: "Apa saja yang termasuk layanan Personal Demand?",
         answer:
-          "Mobile development is the process of creating software applications that run on mobile devices such as smartphones and tablets. It involves designing, coding, and testing applications for mobile operating systems like iOS and Android.",
+          "Layanan ini mencakup personal branding, portrait, lifestyle photography, serta kebutuhan visual personal lainnya.",
       },
       {
-        question:
-          "What's the difference between native and cross-platform mobile development?",
+        question: "Apakah klien bisa membawa konsep sendiri?",
         answer:
-          "Native development involves building separate apps for each platform using platform-specific languages (Swift for iOS, Java/Kotlin for Android). Cross-platform development uses frameworks like React Native or Flutter to build a single codebase that works on multiple platforms.",
+          "Tentu. Kami sangat terbuka untuk berdiskusi dan mengembangkan konsep berdasarkan ide dan referensi dari klien.",
       },
       {
-        question: "What are some popular mobile app development frameworks?",
+        question: "Apakah layanan ini cocok untuk klien pertama kali?",
         answer:
-          "Popular mobile app development frameworks include React Native, Flutter, Xamarin, Ionic, and NativeScript. Each has its own strengths and is suited for different types of projects.",
+          "Sangat cocok. Kami akan memandu klien dari tahap perencanaan hingga hasil akhir secara menyeluruh.",
       },
       {
-        question: "How do you ensure mobile app security?",
+        question: "Berapa lama pengerjaan untuk proyek personal?",
         answer:
-          "Mobile app security involves practices such as secure coding, data encryption, secure authentication methods, regular security audits, and staying up-to-date with the latest security patches and best practices.",
+          "Rata-rata proyek personal selesai dalam waktu 5–10 hari kerja setelah sesi produksi.",
       },
       {
-        question: "What is the typical mobile app development lifecycle?",
+        question: "Apakah hasilnya bersifat eksklusif untuk klien?",
         answer:
-          "The typical mobile app development lifecycle includes stages such as planning, design, development, testing, deployment, and maintenance. It often follows an iterative process with continuous updates and improvements.",
+          "Ya. Seluruh hasil produksi bersifat eksklusif dan tidak digunakan kembali tanpa izin klien.",
       },
     ],
+
     commercial: [
       {
-        question: "What is UI/UX design?",
+        question: "Produk apa saja yang bisa ditangani Kolosal?",
         answer:
-          "UI (User Interface) design focuses on the visual elements of a digital product, while UX (User Experience) design deals with the overall feel and functionality of the product. Together, they aim to create products that are both visually appealing and easy to use.",
+          "Kami menangani berbagai produk seperti fashion, F&B, lifestyle, teknologi, dan produk komersial lainnya.",
       },
       {
-        question: "What's the difference between UI and UX design?",
+        question: "Apakah Kolosal membantu dalam pembuatan konsep?",
         answer:
-          "UI design focuses on the look and layout of a product's interface, including colors, typography, and visual elements. UX design is broader, encompassing the entire user journey and how users interact with the product.",
+          "Ya. Kami membantu mulai dari creative direction, konsep visual, hingga storytelling produk.",
       },
       {
-        question: "What tools do UI/UX designers commonly use?",
+        question: "Apakah hasil konten bisa digunakan untuk iklan?",
         answer:
-          "Common tools for UI/UX design include Sketch, Figma, Adobe XD, InVision, and Protopie for design and prototyping. Research and testing tools might include UserTesting, Hotjar, and Optimal Workshop.",
+          "Bisa. Konten kami dioptimalkan untuk media sosial, digital ads, dan marketplace.",
       },
       {
-        question: "What is a user persona?",
+        question: "Berapa kali revisi yang disediakan?",
         answer:
-          "A user persona is a fictional representation of your ideal user or customer. It's based on user research and includes details about the persona's background, goals, challenges, and behaviors. Personas help guide design decisions by keeping the focus on the end-user.",
+          "Jumlah revisi disesuaikan dengan kesepakatan awal dan dijelaskan secara transparan sebelum produksi.",
       },
       {
-        question: "What is the importance of user testing in UI/UX design?",
+        question: "Apakah Kolosal menerima kerja sama jangka panjang?",
         answer:
-          "User testing is crucial in UI/UX design as it provides direct feedback from actual users. It helps identify usability issues, validate design decisions, and ensure that the product meets user needs and expectations.",
+          "Ya. Kami terbuka untuk kerja sama jangka panjang dan produksi berkelanjutan.",
       },
     ],
+
     ui: [
       {
-        question: "What is copywriting?",
+        question: "Website seperti apa yang dikerjakan Kolosal?",
         answer:
-          "Copywriting is the act of writing text for the purpose of advertising or other forms of marketing. The product, called copy, is written content that aims to increase brand awareness and ultimately persuade a person or group to take a particular action.",
+          "Kami mengerjakan website seperti landing page, company profile, portfolio, dan website custom dengan fokus UX.",
       },
       {
-        question:
-          "What's the difference between copywriting and content writing?",
+        question: "Apakah desain dan development ditangani sekaligus?",
         answer:
-          "While both involve writing, copywriting is specifically aimed at persuasion and driving action (like making a purchase), while content writing is more focused on informing, educating, or entertaining the reader.",
+          "Ya. Kami menangani UI/UX design dan front-end development secara terintegrasi.",
       },
       {
-        question: "What are some key elements of effective copywriting?",
+        question: "Apakah website responsif di semua device?",
         answer:
-          "Key elements of effective copywriting include understanding the target audience, crafting compelling headlines, focusing on benefits rather than features, using persuasive language, and including a clear call-to-action.",
+          "Ya. Semua website dirancang agar optimal di mobile, tablet, dan desktop.",
       },
       {
-        question: "How important is SEO in copywriting?",
+        question: "Apakah desain bisa disesuaikan dengan brand klien?",
         answer:
-          "SEO (Search Engine Optimization) is very important in copywriting, especially for digital content. It helps ensure that your copy reaches your target audience by making it more visible in search engine results. This involves using relevant keywords, creating quality content, and following SEO best practices.",
+          "Bisa. Desain akan disesuaikan dengan identitas visual dan kebutuhan brand klien.",
       },
       {
-        question: "What is a call-to-action (CTA) in copywriting?",
+        question: "Apakah klien mendapatkan file dan hak kepemilikan?",
         answer:
-          "A call-to-action (CTA) is a prompt in your copy that tells the reader what to do next. It's usually a command verb like 'Buy Now,' 'Sign Up,' or 'Learn More.' An effective CTA is clear, compelling, and creates a sense of urgency.",
+          "Ya. Seluruh file final dan source menjadi milik klien setelah proyek selesai.",
       },
     ],
   };
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <FAQ
         title="Frequently Asked Questions"
-        subtitle="Let's answer some questions"
+        subtitle="Pertanyaan yang sering diajukan"
         categories={categories}
         faqData={faqData}
-        className=""
       />
     </div>
   );

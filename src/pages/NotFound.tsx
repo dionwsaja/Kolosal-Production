@@ -28,7 +28,6 @@ const NotFound = () => {
           >
             Back to Home
           </Link>
-
           <Link
             to="/contact"
             className="
