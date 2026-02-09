@@ -47,7 +47,7 @@ export const FAQ = ({
 
 const FAQHeader = ({ title }: { title: string }) => (
   <div className="relative pt-36 z-10 flex flex-col items-center justify-center">
-    <span className="mb-8 text-3xl md:text-5xl font-bold gradient-text">{title}</span>
+    <span className="mb-8 text-3xl md:text-5xl font-bold gradient-text text-center">{title}</span>
   </div>
 );
 

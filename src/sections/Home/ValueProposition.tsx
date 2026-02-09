@@ -2,6 +2,8 @@ import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "../../components/ui/glowing-effect";
 import { cn } from "../../lib/utils";
 
+
+
 export function ValueProposition() {
   return (
     <div className="max-w-7xl mx-auto pt-36 px-4">
@@ -80,6 +82,8 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
           inactiveZone={0.01}
           borderWidth={3}
         />
+
+        
 
         <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-transparent p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)]">
           <div className="flex flex-1 flex-col gap-4">
