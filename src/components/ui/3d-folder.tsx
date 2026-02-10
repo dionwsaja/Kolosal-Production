@@ -6,7 +6,7 @@ import React, {
   useCallback,
   forwardRef,
 } from "react";
-import { X, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ExternalLink, ChevronLeft, ChevronRight, Camera, User, ShoppingBag, Code } from "lucide-react";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -445,6 +445,7 @@ interface AnimatedFolderProps {
   projects: Project[];
   className?: string;
   gradient?: string;
+  icon?: React.ReactNode;
 }
 
 const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
@@ -452,6 +453,7 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
   projects,
   className,
   gradient,
+  icon,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -585,7 +587,22 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
               transition: "transform 700ms cubic-bezier(0.16, 1, 0.3, 1)",
               zIndex: 30,
             }}
-          />
+          >
+            {icon && (
+              <div
+                className="absolute inset-0 flex items-center justify-center "
+                style={{
+                  opacity: isHovered ? 0 : 1,
+                  transform: isHovered ? "scale(0.7)" : "scale(1)",
+                  transition: "opacity 500ms cubic-bezier(0.16, 1, 0.3, 1), transform 500ms cubic-bezier(0.16, 1, 0.3, 1)",
+                  color: "rgba(255, 255, 255, 0.9)",
+                  filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3))",
+                }}
+              >
+                {icon}
+              </div>
+            )}
+          </div>
           <div
             className="absolute w-32 h-24 rounded-lg overflow-hidden pointer-events-none"
             style={{
@@ -636,6 +653,7 @@ const portfolioData = [
   {
     title: "Event Documentation",
     gradient: "linear-gradient(135deg, #e73827, #f85032)",
+    icon: <Camera size={48} strokeWidth={1.5} />,
     projects: [
       {
         id: "b1",
@@ -657,6 +675,7 @@ const portfolioData = [
   {
     title: "Personal Demand",
     gradient: "linear-gradient(to right, #f7b733, #fc4a1a)",
+    icon: <User size={48} strokeWidth={1.5} />,
     projects: [
       {
         id: "w1",
@@ -678,6 +697,7 @@ const portfolioData = [
   {
     title: "Commercial & Product Design",
     gradient: "linear-gradient(135deg, #00c6ff, #0072ff)",
+    icon: <ShoppingBag size={48} strokeWidth={1.5} />,
     projects: [
       {
         id: "u1",
@@ -699,6 +719,7 @@ const portfolioData = [
   {
     title: "UI/UX & Web Development",
     gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)",
+    icon: <Code size={48} strokeWidth={1.5} />,
     projects: [
       {
         id: "i1",
@@ -765,6 +786,7 @@ export default function App() {
                 title={folder.title}
                 projects={folder.projects}
                 gradient={folder.gradient}
+                icon={folder.icon}
                 className="w-full md:h-75 bg-transparent shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/20 "
               />
             </div>

@@ -22,8 +22,8 @@ const testimonials = [
   },
   {
     text: "Saya dukung kegiatan ananda sekalian untuk masa depan dan kemajuan bangsa ini,mudah mudahan ananda sekalian sukses dalam mencapai cita citanya",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
-    name: "Almh. Mayjen TNI (Purn.) Salim S. Mengga ",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvd81bnKVdkyzdmMLjw5LcAUHYO__fdsNSLQ&s",
+    name: "Alm. Mayjen TNI (Purn.) Salim S. Mengga ",
     role: "(Wagub Sulbar 2025 - 2026)",
   },
   {
