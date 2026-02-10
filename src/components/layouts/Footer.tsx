@@ -5,7 +5,7 @@ import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 function Footers() {
   return (
-    <footer className="relative w-full overflow-hidden ">
+    <footer className="relative w-full overflow-hidden bg-[#00030D] ">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center  -scale-x-100"
         style={{
