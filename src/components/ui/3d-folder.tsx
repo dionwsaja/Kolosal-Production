@@ -718,7 +718,7 @@ const portfolioData = [
   },
   {
     title: "UI/UX & Web Development",
-    gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
+    gradient: "linear-gradient(135deg, #6c4120, #f7d07f)  ",
     icon: <Code size={48} strokeWidth={1.5} />,
     projects: [
       {

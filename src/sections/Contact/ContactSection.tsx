@@ -10,8 +10,8 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2">
        
           <div className="p-8 md:p-14">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
-              Get in touch
+            <h2 className="text-xl md:text-3xl font-bold tracking-tight text-white">
+              Let's Collaborate & Do something great together
             </h2>
 
             <p className="mt-6 max-w-md text-white/65 leading-relaxed">
