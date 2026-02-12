@@ -39,7 +39,7 @@ export function Demo() {
         <div ref={ref} className="relative z-10 w-full px-4 mb-12">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-center">
           <span className="text-md md:text-5xl font-bold leading-tight max-w-7xl md:max-w-6xl gradient-text">
-            Let’s explore our collaboration and witness <br className="md:block"/> how we turn ideas into visual works that matter
+            Let’s explore our contribution and witness <br className="md:block"/> how we turn ideas into visual works that matter
           </span>
           <p className="mt-6 text-sm md:text-lg text-white/60 max-w-6xl">
             Kolosal Production is a creative partner for brands, events, and

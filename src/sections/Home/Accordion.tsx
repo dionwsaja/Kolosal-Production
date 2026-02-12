@@ -9,117 +9,118 @@ const Accordion = () => {
   };
 
   const faqData = {
-    EventDocumentation: [
-      {
-        question: "Jenis event apa saja yang bisa ditangani Kolosal?",
-        answer:
-          "Kami menangani berbagai jenis event seperti acara korporat, brand activation, konferensi, konser, pameran, hingga acara privat dengan standar produksi profesional.",
-      },
-      {
-        question: "Apakah konsep visual event bisa disesuaikan?",
-        answer:
-          "Bisa. Gaya visual, storytelling, hingga tone dokumentasi dapat disesuaikan dengan identitas brand dan tujuan event Anda.",
-      },
-      {
-        question: "Apakah Kolosal menyediakan foto dan video sekaligus?",
-        answer:
-          "Ya. Kami menyediakan paket dokumentasi foto, video, maupun kombinasi keduanya sesuai kebutuhan.",
-      },
-      {
-        question: "Berapa lama proses pengerjaan setelah event selesai?",
-        answer:
-          "Proses post-production biasanya memakan waktu sekitar 7–14 hari kerja, tergantung kompleksitas proyek.",
-      },
-      {
-        question: "Apakah Kolosal bisa menangani event luar kota?",
-        answer:
-          "Ya. Tim kami siap menangani event di luar kota dengan perencanaan dan jadwal yang disepakati.",
-      },
-    ],
+   EventDocumentation: [
+  {
+    question: "What types of events can Kolosal handle?",
+    answer:
+      "We handle various types of events, including corporate events, brand activations, conferences, concerts, exhibitions, and private events, all with professional production standards.",
+  },
+  {
+    question: "Can the visual concept of the event be customized?",
+    answer:
+      "Yes. The visual style, storytelling approach, and overall tone of the documentation can be tailored to match your brand identity and event objectives.",
+  },
+  {
+    question: "Does Kolosal provide both photo and video services?",
+    answer:
+      "Yes. We offer photography, videography, and combined documentation packages based on your needs.",
+  },
+  {
+    question: "How long does the production process take after the event?",
+    answer:
+      "The post-production process typically takes around 7–14 working days, depending on the complexity of the project.",
+  },
+  {
+    question: "Can Kolosal handle out-of-town events?",
+    answer:
+      "Yes. Our team is ready to handle events outside the city with proper planning and an agreed schedule.",
+  },
+],
 
-    personalDemand: [
-      {
-        question: "Apa saja yang termasuk layanan Personal Demand?",
-        answer:
-          "Layanan ini mencakup personal branding, portrait, lifestyle photography, serta kebutuhan visual personal lainnya.",
-      },
-      {
-        question: "Apakah klien bisa membawa konsep sendiri?",
-        answer:
-          "Tentu. Kami sangat terbuka untuk berdiskusi dan mengembangkan konsep berdasarkan ide dan referensi dari klien.",
-      },
-      {
-        question: "Apakah layanan ini cocok untuk klien pertama kali?",
-        answer:
-          "Sangat cocok. Kami akan memandu klien dari tahap perencanaan hingga hasil akhir secara menyeluruh.",
-      },
-      {
-        question: "Berapa lama pengerjaan untuk proyek personal?",
-        answer:
-          "Rata-rata proyek personal selesai dalam waktu 5–10 hari kerja setelah sesi produksi.",
-      },
-      {
-        question: "Apakah hasilnya bersifat eksklusif untuk klien?",
-        answer:
-          "Ya. Seluruh hasil produksi bersifat eksklusif dan tidak digunakan kembali tanpa izin klien.",
-      },
-    ],
+personalDemand: [
+  {
+    question: "What services are included in Personal Demand?",
+    answer:
+      "This service includes personal branding, portrait sessions, lifestyle photography, and other personal visual needs.",
+  },
+  {
+    question: "Can clients bring their own concepts?",
+    answer:
+      "Absolutely. We are very open to discussing and developing concepts based on the client’s ideas and references.",
+  },
+  {
+    question: "Is this service suitable for first-time clients?",
+    answer:
+      "Yes. We guide clients thoroughly from the planning stage through to the final delivery.",
+  },
+  {
+    question: "How long does a personal project usually take?",
+    answer:
+      "On average, personal projects are completed within 5–10 working days after the production session.",
+  },
+  {
+    question: "Are the results exclusive to the client?",
+    answer:
+      "Yes. All final deliverables are exclusive and will not be reused without the client’s permission.",
+  },
+],
 
-    commercial: [
-      {
-        question: "Produk apa saja yang bisa ditangani Kolosal?",
-        answer:
-          "Kami menangani berbagai produk seperti fashion, F&B, lifestyle, teknologi, dan produk komersial lainnya.",
-      },
-      {
-        question: "Apakah Kolosal membantu dalam pembuatan konsep?",
-        answer:
-          "Ya. Kami membantu mulai dari creative direction, konsep visual, hingga storytelling produk.",
-      },
-      {
-        question: "Apakah hasil konten bisa digunakan untuk iklan?",
-        answer:
-          "Bisa. Konten kami dioptimalkan untuk media sosial, digital ads, dan marketplace.",
-      },
-      {
-        question: "Berapa kali revisi yang disediakan?",
-        answer:
-          "Jumlah revisi disesuaikan dengan kesepakatan awal dan dijelaskan secara transparan sebelum produksi.",
-      },
-      {
-        question: "Apakah Kolosal menerima kerja sama jangka panjang?",
-        answer:
-          "Ya. Kami terbuka untuk kerja sama jangka panjang dan produksi berkelanjutan.",
-      },
-    ],
+commercial: [
+  {
+    question: "What types of products can Kolosal handle?",
+    answer:
+      "We handle a wide range of products, including fashion, F&B, lifestyle, technology, and other commercial products.",
+  },
+  {
+    question: "Does Kolosal help with concept development?",
+    answer:
+      "Yes. We assist with creative direction, visual concepts, and product storytelling.",
+  },
+  {
+    question: "Can the content be used for advertising purposes?",
+    answer:
+      "Yes. Our content is optimized for social media, digital advertising, and marketplaces.",
+  },
+  {
+    question: "How many revisions are included?",
+    answer:
+      "The number of revisions is based on the initial agreement and is clearly communicated before production begins.",
+  },
+  {
+    question: "Does Kolosal accept long-term collaborations?",
+    answer:
+      "Yes. We are open to long-term partnerships and ongoing production projects.",
+  },
+],
 
-    ui: [
-      {
-        question: "Website seperti apa yang dikerjakan Kolosal?",
-        answer:
-          "Kami mengerjakan website seperti landing page, company profile, portfolio, dan website custom dengan fokus UX.",
-      },
-      {
-        question: "Apakah desain dan development ditangani sekaligus?",
-        answer:
-          "Ya. Kami menangani UI/UX design dan front-end development secara terintegrasi.",
-      },
-      {
-        question: "Apakah website responsif di semua device?",
-        answer:
-          "Ya. Semua website dirancang agar optimal di mobile, tablet, dan desktop.",
-      },
-      {
-        question: "Apakah desain bisa disesuaikan dengan brand klien?",
-        answer:
-          "Bisa. Desain akan disesuaikan dengan identitas visual dan kebutuhan brand klien.",
-      },
-      {
-        question: "Apakah klien mendapatkan file dan hak kepemilikan?",
-        answer:
-          "Ya. Seluruh file final dan source menjadi milik klien setelah proyek selesai.",
-      },
-    ],
+ui: [
+  {
+    question: "What types of websites does Kolosal develop?",
+    answer:
+      "We develop websites such as landing pages, company profiles, portfolios, and custom websites with a strong focus on user experience (UX).",
+  },
+  {
+    question: "Do you handle both design and development?",
+    answer:
+      "Yes. We provide integrated UI/UX design and front-end development services.",
+  },
+  {
+    question: "Are the websites responsive across all devices?",
+    answer:
+      "Yes. All websites are designed to perform optimally on mobile, tablet, and desktop devices.",
+  },
+  {
+    question: "Can the design be customized to match the client’s brand?",
+    answer:
+      "Yes. The design will be tailored to fit the client’s brand identity and business needs.",
+  },
+  {
+    question: "Will clients receive the source files and ownership rights?",
+    answer:
+      "Yes. All final files and source materials become the client’s property upon project completion.",
+  },
+],
+
   };
 
   return (
