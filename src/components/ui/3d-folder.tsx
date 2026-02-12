@@ -652,7 +652,7 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
 const portfolioData = [
   {
     title: "Event Documentation",
-    gradient: "linear-gradient(135deg, #e73827, #f85032)",
+    gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <Camera size={48} strokeWidth={1.5} />,
     projects: [
       {
@@ -674,7 +674,7 @@ const portfolioData = [
   },
   {
     title: "Personal Demand",
-    gradient: "linear-gradient(to right, #f7b733, #fc4a1a)",
+    gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <User size={48} strokeWidth={1.5} />,
     projects: [
       {
@@ -696,7 +696,7 @@ const portfolioData = [
   },
   {
     title: "Commercial & Product Design",
-    gradient: "linear-gradient(135deg, #00c6ff, #0072ff)",
+    gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <ShoppingBag size={48} strokeWidth={1.5} />,
     projects: [
       {
@@ -718,7 +718,7 @@ const portfolioData = [
   },
   {
     title: "UI/UX & Web Development",
-    gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)",
+    gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <Code size={48} strokeWidth={1.5} />,
     projects: [
       {

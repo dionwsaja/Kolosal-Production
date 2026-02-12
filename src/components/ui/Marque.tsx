@@ -40,6 +40,9 @@ export const logos = [
 const Marque = () => {
   return (
     <div className="absolute bottom-10 left-0 w-full overflow-hidden z-10">
+      <div className="text-center mb-4">
+        <span className="text-sm md:text-lg font-semibold gradient-text italic">Our Contribution</span>
+      </div>
       <motion.div
         className="flex w-max items-center gap-16 px-16"
         animate={{ x: ["0%", "-50%"] }}
