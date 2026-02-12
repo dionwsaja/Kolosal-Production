@@ -11,7 +11,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2">
        
           <div className="p-8 md:p-14">
-            <img src={img} alt="" className=""   />
+            <img src={img} alt="" className="w-full"   />
 
             <p className="mt-6 max-w-md text-white/65 leading-relaxed">
               If you have any questions regarding our services or need help,
@@ -19,7 +19,7 @@ const ContactSection = () => {
               one business day.
             </p>
 
-            <div className="mt-12 space-y-6">
+            <div className="mt-12 space-y-6 break-all truncate">
               <a
                 href="mailto:kolosalproduction@gmail.com"
                 className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/10 transition-colors group border border-white/20"
@@ -68,7 +68,7 @@ const ContactSection = () => {
           </div>
 
          
-          <div className="border-t md:border-t-0 md:border-l border-white/10 p-8 md:p-14">
+          <div className="border-t md:border-t-0 md:border-l border-white/10 p-6 md:p-14">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="mb-2 block text-sm text-white/70">
