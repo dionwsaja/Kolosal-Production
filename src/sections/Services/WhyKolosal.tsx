@@ -5,7 +5,7 @@ const WHY_KOLOSAL = [
   },
   {
     title: "Story-First Approach",
-    desc: "Every visual is built on narrative, purpose, and meaning — not trends alone.",
+    desc: "Every visual is built on narrative, purpose, and meaning, not trends alone.",
   },
   {
     title: "Professional Execution",

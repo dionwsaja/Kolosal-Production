@@ -1,6 +1,7 @@
 import { ServiceOverview } from "../sections/Services/ServiceOverview";
 import { Hero } from "../sections/Services/Hero";
 import WhyKolosal from "../sections/Services/WhyKolosal";
+import {InFrame} from "../sections/Services/InFrame";
 
 const Services = () => {
   return (
@@ -8,6 +9,7 @@ const Services = () => {
       <Hero></Hero>
       <ServiceOverview></ServiceOverview> 
       <WhyKolosal/>
+      <InFrame></InFrame>
     </div>
   );
 };
