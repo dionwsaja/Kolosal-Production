@@ -116,10 +116,10 @@ const Testimonials = () => {
           className="flex flex-col items-center justify-center max-w-135 mx-auto"
         >
           <span className="text-3xl md:text-5xl font-bold tracking-tighter pt-4 gradient-text mt-5">
-            What our users say
+            What They Said
           </span>
           <p className="text-center mt-5 opacity-75">
-            See what our customers have to say about us.
+            See Who Said Something About Us
           </p>
         </motion.div>
 
