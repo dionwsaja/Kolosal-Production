@@ -2,8 +2,8 @@ import bg from "../../assets/images/pp.jpg";
 
 const points = [
   {
-    title: "Creative Partner, Not a Vendor",
-    desc: "We collaborate from idea to execution",
+    title: "Creative Partner",
+    desc: "We collaborate from idea to execution, not just deliver outputs",
   },
   {
     title: "Youth-Driven Production House",
