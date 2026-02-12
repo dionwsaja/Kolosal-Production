@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useForm } from "@formspree/react";
+import img from "../../assets/images/contact.png"
 
 const ContactSection = () => {
   const [state, handleSubmit] = useForm("mykdypwy");
@@ -10,9 +11,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2">
        
           <div className="p-8 md:p-14">
-            <h2 className="text-xl md:text-3xl font-bold tracking-tight text-white">
-              Let's Collaborate & Do something great together
-            </h2>
+            <img src={img} alt="" className=""   />
 
             <p className="mt-6 max-w-md text-white/65 leading-relaxed">
               If you have any questions regarding our services or need help,
