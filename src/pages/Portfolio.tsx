@@ -1,5 +1,7 @@
 import { useState } from "react";
 import PortfolioGallery from "../sections/Portfolio/PortfolioGallery";
+import QR from "../sections/Portfolio/QR";
+
 
 type TabType = "event" | "personal" | "commercial" | "web";
 
@@ -59,10 +61,11 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Gallery */}
+      
         <div className="w-full">
           {renderGallery()}
         </div>
+        <QR />
       </div>
     </section>
   );
