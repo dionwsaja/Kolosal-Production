@@ -1,74 +1,90 @@
+import React from "react";
+
 interface PortfolioGalleryProps {
-  folder: string;
+  folder: "event" | "personal" | "commercial" | "web";
+  columns: number;
 }
 
-const uiLinks: Record<number, string> = {
-  1: "https://profitara.vercel.app/",
-  2: "https://minimiwaste.vercel.app/",
-  3: "https://ricoanddiana.vercel.app/",
-  4: "https://dionwsaja.github.io/ac_kw_2/",
+// STATIC GLOB
+const allImages = import.meta.glob(
+  "../../assets/images/*/*.jpg",
+  { eager: true, import: "default" }
+) as Record<string, string>;
+
+// Web links mapping
+const webLinks: Record<string, string> = {
+  "1.jpg": "https://profitara.vercel.app",
+  "2.jpg": "https://minimiwaste.vercel.app",
+  "3.jpg": "https://fusionlab.vercel.app",
+  "4.jpg": "https://ricoanddiana.vercel.app",
 };
 
-const PortfolioGallery = ({ folder }: PortfolioGalleryProps) => {
-  const imageModules = import.meta.glob(
-    "/src/assets/images/Portfolio/**/*.{jpg,jpeg,png,JPG,JPEG,PNG,webp}",
-    { eager: true }
-  );
+const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
+  folder,
+  columns,
+}) => {
+  const images = Object.entries(allImages)
+    .filter(([path]) => path.includes(`/images/${folder}/`))
+    .map(([path, src]) => ({
+      path,
+      src,
+      filename: path.split("/").pop() || "",
+    }));
 
-  const images = Object.keys(imageModules)
-    .filter((path) => path.includes(`/Portfolio/${folder}/`))
-    .map((path) => {
-      const match = path.match(/\/(\d+)\.(jpg|jpeg|png|webp)$/i);
-      const order = match ? Number(match[1]) : 0;
-
-      
-      const src = (imageModules[path] as { default: string }).default;
-
-      return { path, src, order };
-    })
-    .sort((a, b) => a.order - b.order);
-
-  if (images.length === 0) {
-    return (
-      <div className="text-center py-10 w-full text-white/50">
-        No images found for {folder}
-      </div>
-    );
-  }
+  images.sort((a, b) => {
+    const numA = parseInt(a.filename.match(/(\d+)/)?.[1] || "0");
+    const numB = parseInt(b.filename.match(/(\d+)/)?.[1] || "0");
+    return numA - numB;
+  });
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+    <div className={`grid gap-4 ${columns === 3 ? "grid-cols-3" : "grid-cols-4"}`}>
       {images.map((img, index) => {
-        const isUI = folder === "ui";
-        const link = isUI ? uiLinks[img.order] : null;
+        const number = parseInt(img.filename.match(/(\d+)/)?.[1] || "0");
 
-        const ImageContent = (
+        // PERSONAL portrait rows
+        const isPersonalPortrait =
+          folder === "personal" &&
+          (
+            (number >= 4 && number <= 6) ||
+            (number >= 16 && number <= 18)
+          );
+
+        // COMMERCIAL all portrait
+        const isCommercialPortrait = folder === "commercial";
+
+        // EVENT fixed height landscape
+        const isEvent = folder === "event";
+
+        const imageElement = (
           <img
             src={img.src}
-            alt={`${folder} ${img.order}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            loading="lazy"
+            alt={img.filename}
+            className={`
+              w-full
+              ${isEvent ? "h-64 object-cover" : ""}
+              ${
+                isPersonalPortrait || isCommercialPortrait
+                  ? "object-contain"
+                  : ""
+              }
+              hover:scale-105 transition duration-300
+            `}
           />
         );
 
         return (
-          <div
-            key={img.path}
-            data-aos="fade-up"
-            data-aos-delay={index * 50}
-            className="overflow-hidden rounded-md aspect-[3/4] group"
-          >
-            {isUI && link ? (
+          <div key={index} className="overflow-hidden rounded-xl bg-black">
+            {folder === "web" ? (
               <a
-                href={link}
+                href={webLinks[img.filename]}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full h-full"
               >
-                {ImageContent}
+                {imageElement}
               </a>
             ) : (
-              ImageContent
+              imageElement
             )}
           </div>
         );

@@ -1,35 +1,56 @@
 import { useState } from "react";
 import PortfolioGallery from "../sections/Portfolio/PortfolioGallery";
-import QR from "../sections/Portfolio/QR";
 
-const tabs = [
-  { key: "event", label: "Event Documentation" },
-  { key: "personal", label: "Personal Demand" },
-  { key: "commercial", label: "Commercial & Product" },
-  { key: "ui", label: "UI/UX & Web Development" },
-];
+type TabType = "event" | "personal" | "commercial" | "web";
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState("event");
+  const [activeTab, setActiveTab] = useState<TabType>("event");
+
+  const tabs = [
+    { key: "event", label: "Event Documentation" },
+    { key: "personal", label: "Personal Demand" },
+    { key: "commercial", label: "Commercial & Product Visual" },
+    { key: "web", label: "UI/UX & Web Development" },
+  ];
+
+  const renderGallery = () => {
+    switch (activeTab) {
+      case "event":
+        return <PortfolioGallery folder="event" columns={3} />;
+      case "personal":
+        return <PortfolioGallery folder="personal" columns={3} />;
+      case "commercial":
+        return <PortfolioGallery folder="commercial" columns={3} />;
+      case "web":
+        return <PortfolioGallery folder="web" columns={4} />;
+      default:
+        return null;
+    }
+  };
 
   return (
-    <section className="bg-[#00030D] text-white py-36">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col gap-y-6 justify-center items-center text-center">
-        <div className="mb-10">
-          <span className="text-3xl gradient-text md:text-5xl font-bold">Our Portfolio</span>
-          <p className="text-white/60">
+    <section className="bg-[#00030D] text-white py-24">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
+
+        <div className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Our Portfolio
+          </h1>
+          <p className="text-white/60 mt-2">
             Selected works based on our services
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4  gap-3 mb-12">
+
+        {/* Tabs */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 w-full max-w-4xl">
           {tabs.map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
-              className={`px-4 py-2 rounded-md text-sm transition 
+              onClick={() => setActiveTab(tab.key as TabType)}
+              className={`px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300
                 ${
                   activeTab === tab.key
-                    ? "bg-linear-to-r  from-[#f7d07f] to-[#f7d07f]/60 text-white"
+                    ? "bg-gradient-to-r from-[#f7d07f] to-[#f7d07f]/60 text-black"
                     : "bg-white/10 hover:bg-white/20"
                 }`}
             >
@@ -38,14 +59,11 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {activeTab === "event" && <PortfolioGallery folder="event" />}
-        {activeTab === "personal" && <PortfolioGallery folder="personal" />}
-        {activeTab === "commercial" && (
-          <PortfolioGallery folder="commercial" />
-        )}
-        {activeTab === "ui" && <PortfolioGallery folder="ui" />}
+        {/* Gallery */}
+        <div className="w-full">
+          {renderGallery()}
+        </div>
       </div>
-      <QR/>
     </section>
   );
 };
