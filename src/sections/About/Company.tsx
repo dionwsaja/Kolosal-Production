@@ -30,7 +30,7 @@ export default function Company() {
               alt="Kolosal Production"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/30" />
+            {/* <div className="absolute inset-0 bg-black/30" /> */}
           </div>
           <div className="flex flex-col gap-10">
             <div className="space-y-4 w-full">
