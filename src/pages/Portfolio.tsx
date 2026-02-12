@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PortfolioGallery from "../sections/Portfolio/PortfolioGallery";
 import QR from "../sections/Portfolio/QR";
+import { useSearchParams } from "react-router-dom";
 
 
 type TabType = "event" | "personal" | "commercial" | "web";
 
 const Portfolio = () => {
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState<TabType>("event");
+
+  useEffect(() => {
+    const tabParam = searchParams.get("tab") as TabType;
+    if (tabParam && ["event", "personal", "commercial", "web"].includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [searchParams]);
 
   const tabs = [
     { key: "event", label: "Event Documentation" },
