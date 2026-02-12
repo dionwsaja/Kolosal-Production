@@ -1,4 +1,4 @@
-import bg from "../../assets/images/Portfolio/event/20.jpg";
+import bg from "../../assets/images/pp.jpg";
 
 const points = [
   {

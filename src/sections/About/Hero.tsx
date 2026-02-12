@@ -19,8 +19,10 @@ export function Hero() {
         <h1 className="md:text-7xl text-5xl  font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#f7d07f] to-[#6c4120]">
           About Us
         </h1>
-        <p className="text-white/60 cursor-default text-center">
-          Our Background
+        <p className="text-white/60 cursor-default text-center text-sm max-w-7xl">
+          Kolosal Production is a multimedia production house driven by the energy and innovation of the younger generation. We are here as a creative partner, ready to help you capture every precious moment through aesthetic visual integration and functional digital solutions. With an adaptive youthful spirit, we are committed to transforming your ideas into tangible works that are not only beautiful, but also capable of representing your identity in a profound and memorable way.
+The quality of our work is backed by the experience of our Project Director, who has served as a photographer for various major events, such as BUMN, Netflix, and Byon Combat. We apply our field experience in handling documentation for these leading companies and events to every project. This ensures that every piece of work we deliver meets proven technical and professional standards.
+
         </p>
       </div>
     </div>

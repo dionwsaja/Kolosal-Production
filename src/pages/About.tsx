@@ -1,4 +1,4 @@
-import Workflow  from "../sections/About/Workflow";
+import {WorkflowTimeline} from "../sections/About/WorkflowTimeline";
 import Company from "../sections/About/Company";
 import { Hero } from "../sections/About/Hero";
 
@@ -7,7 +7,7 @@ const About = () => {
     <div className="bg-[#00030D]">
       <Hero></Hero>
       <Company />
-      <Workflow/>
+      <WorkflowTimeline/>
     </div>
   );
 };
