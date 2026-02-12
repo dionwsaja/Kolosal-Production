@@ -34,7 +34,7 @@
 
     return (
       <div
-        className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+        className="w-full bg-[#00030D] font-sans md:px-10"
         ref={containerRef}
       >
         
