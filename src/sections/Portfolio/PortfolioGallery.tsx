@@ -11,7 +11,6 @@ const allImages = import.meta.glob(
   { eager: true, import: "default" }
 ) as Record<string, string>;
 
-// Web links mapping
 const webLinks: Record<string, string> = {
   "1.jpg": "https://profitara.vercel.app",
   "2.jpg": "https://minimiwaste.vercel.app",
@@ -38,53 +37,91 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
   });
 
   return (
-    <div className={`grid gap-4 ${columns === 3 ? "grid-cols-3" : "grid-cols-4"}`}>
+    <div
+      className={`
+        grid gap-4
+        ${
+          folder === "web"
+            ? "grid-cols-2 md:grid-cols-4"
+            : columns === 3
+            ? "grid-cols-3"
+            : "grid-cols-4"
+        }
+      `}
+    >
       {images.map((img, index) => {
         const number = parseInt(img.filename.match(/(\d+)/)?.[1] || "0");
 
-        // PERSONAL portrait rows
         const isPersonalPortrait =
           folder === "personal" &&
-          (
-            (number >= 4 && number <= 6) ||
-            (number >= 16 && number <= 18)
-          );
+          ((number >= 4 && number <= 6) ||
+            (number >= 16 && number <= 18));
 
-        // COMMERCIAL all portrait
         const isCommercialPortrait = folder === "commercial";
-
-        // EVENT fixed height landscape
         const isEvent = folder === "event";
-
-        const imageElement = (
-          <img
-            src={img.src}
-            alt={img.filename}
-            className={`
-              w-full
-              ${isEvent ? "h-64 object-cover" : ""}
-              ${
-                isPersonalPortrait || isCommercialPortrait
-                  ? "object-contain"
-                  : ""
-              }
-              hover:scale-105 transition duration-300
-            `}
-          />
-        );
+        const isWeb = folder === "web";
 
         return (
-          <div key={index} className="overflow-hidden rounded-xl bg-black">
-            {folder === "web" ? (
+          <div
+            key={index}
+            className="relative overflow-hidden rounded-xl group bg-black"
+          >
+            {/* EVENT FIXED LANDSCAPE */}
+            {isEvent && (
+              <div className="aspect-video">
+                <img
+                  src={img.src}
+                  alt={img.filename}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+
+            {/* PERSONAL */}
+            {folder === "personal" && (
+              <img
+                src={img.src}
+                alt={img.filename}
+                className={`
+                  w-full
+                  ${
+                    isPersonalPortrait
+                      ? "object-contain"
+                      : "aspect-video object-cover"
+                  }
+                `}
+              />
+            )}
+
+            {/* COMMERCIAL */}
+            {isCommercialPortrait && (
+              <img
+                src={img.src}
+                alt={img.filename}
+                className="w-full object-contain"
+              />
+            )}
+
+            {/* WEB */}
+            {isWeb && (
               <a
                 href={webLinks[img.filename]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {imageElement}
+                <img
+                  src={img.src}
+                  alt={img.filename}
+                  className="w-full aspect-video object-cover"
+                />
+
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                  <span className="text-white text-sm md:text-base font-semibold tracking-wide">
+                    Visit Website
+                  </span>
+                </div>
               </a>
-            ) : (
-              imageElement
             )}
           </div>
         );
