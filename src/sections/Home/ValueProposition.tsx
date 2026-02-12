@@ -28,7 +28,7 @@ export function ValueProposition() {
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
           icon={<Box className="h-4 w-4" />}
           title="Integrated Visual & Digital Solutions"
-          description="From aesthetic visual production to functional digital outputs, we create cohesive experiences—not fragmented deliverables."
+          description="From aesthetic visual production to functional digital outputs, we create cohesive experiences, not fragmented deliverables."
         />
 
         <GridItem
@@ -42,7 +42,7 @@ export function ValueProposition() {
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
           icon={<Lock className="h-4 w-4" />}
           title="Creative Partner, Not Just a Vendor"
-          description="We work as an extension of your team—translating ideas, identity, and vision into visual and digital works that truly represent who you are."
+          description="We work as an extension of your team,translating ideas, identity, and vision into visual and digital works that truly represent who you are."
         />
 
         <GridItem
@@ -56,7 +56,7 @@ export function ValueProposition() {
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
           icon={<Search className="h-4 w-4" />}
           title="Identity-Focused Storytelling"
-          description="Every project is designed to be more than just visually pleasing—it’s built to communicate identity in a strong, memorable, and meaningful way."
+          description="Every project is designed to be more than just visually pleasing, it’s built to communicate identity in a strong, memorable, and meaningful way."
         />
       </ul>
     </div>
