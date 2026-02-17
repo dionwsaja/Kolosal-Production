@@ -42,7 +42,6 @@ const Portfolio = () => {
   return (
     <section className="bg-[#00030D] text-white py-24">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
-
         <div className="mb-12 pt-24">
           <span className="text-4xl gradient-text md:text-5xl font-bold">
             Our Portfolio
@@ -51,8 +50,6 @@ const Portfolio = () => {
             Selected works based on our services
           </p>
         </div>
-
-        {/* Tabs */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 w-full max-w-4xl">
           {tabs.map((tab) => (
             <button
@@ -69,8 +66,6 @@ const Portfolio = () => {
             </button>
           ))}
         </div>
-
-      
         <div className="w-full">
           {renderGallery()}
         </div>

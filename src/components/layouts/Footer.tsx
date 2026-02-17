@@ -20,10 +20,10 @@ function Footers() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
   
           <div>
-            <p className="mb-4 text-xs tracking-widest text-white/40">
+            <span className=" text-xs tracking-widest gradient-text ">
               CONTACT KOLOSAL ON
-            </p>
-            <ul className="space-y-3 text-sm text-white/80">
+            </span>
+            <ul className="space-y-3 text-sm text-white/80 mt-4">
               <li>
                 <a href="https://www.instagram.com/kolosalproduction/" target="_blank" className="hover:text-white transition">
                   Instagram
@@ -44,10 +44,10 @@ function Footers() {
 
      
           <div>
-            <p className="mb-4 text-xs tracking-widest text-white/40">
+            <span className="mb-4 text-xs tracking-widest gradient-text">
               DETAILED SERVICES
-            </p>
-            <ul className="space-y-3 text-sm text-white/80">
+            </span>
+            <ul className="space-y-3 text-sm text-white/80 mt-4">
               <li>Photography</li>
               <li>Videography</li>
               <li>Digital Production</li>
@@ -56,10 +56,10 @@ function Footers() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs tracking-widest text-white/40">
+            <span className="mb-4 text-xs tracking-widest gradient-text">
               PAGES
-            </p>
-            <ul className="space-y-3 text-sm text-white/80">
+            </span>
+            <ul className="space-y-3 text-sm text-white/80 mt-4">
             <li>
                 <Link to="/" className="hover:text-white transition">
                   Home
@@ -90,14 +90,16 @@ function Footers() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs tracking-widest text-white/40">
+            <span className="mb-4 text-xs tracking-widest gradient-text">
               COMPANY
-            </p>
-            <ul className="space-y-3 text-sm text-white/80">
-              <li>Privacy Policy</li>
-              <li>Legal</li>
-              <li>Security</li>
-              <li>Status</li>
+            </span>
+            <ul className="space-y-3 text-sm text-white/80 mt-4">
+            <li>
+              <Link to="/privacy"> Privacy Policy</Link>
+            </li>
+            <li>
+               <Link to="/coming-soon">What's Coming Soon?</Link>
+            </li>
             </ul>
           </div>
         </div>
