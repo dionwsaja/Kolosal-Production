@@ -494,12 +494,12 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
     <>
       <div
         className={cn(
-          "relative flex flex-col items-center justify-center p-8 rounded-2xl cursor-pointer bg-card border border-border transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/40 group",
+          "relative flex flex-col items-center justify-center p-4 md:p-8 rounded-2xl cursor-pointer bg-card border border-border transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/40 group",
           className,
         )}
         style={{
-          minWidth: "280px",
-          minHeight: "320px",
+          width: "100%",
+          aspectRatio: "1/1.1",
           perspective: "1200px",
           transform: isHovered
             ? "scale(1.04) rotate(-1.5deg)"
@@ -518,7 +518,7 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
           }}
         />
         <div
-          className="relative flex items-center justify-center mb-4"
+          className="relative flex items-center justify-center mb-4 scale-[0.7] md:scale-100"
           style={{ height: "160px", width: "200px" }}
         >
           <div
@@ -763,7 +763,7 @@ export default function App() {
   }, [isDark]);
 
   return (
-    <main className="bg-[#00030D] text-foreground transition-colors duration-500 selection:bg-accent/30 selection:text-accent-foreground pt-36">
+    <main className="bg-[#00030D] text-foreground transition-colors duration-500 selection:bg-accent/30 selection:text-accent-foreground pt-36 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-black   mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <span className="gradient-text text-3xl md:text-5xl">Our Core Services</span>
@@ -775,7 +775,7 @@ export default function App() {
       </div>
 
       <section className="max-w-7xl mx-auto px-4 pt-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12 justify-items-center">
           {portfolioData.map((folder, index) => (
             <div
               key={folder.title}
@@ -787,7 +787,7 @@ export default function App() {
                 projects={folder.projects}
                 gradient={folder.gradient}
                 icon={folder.icon}
-                className="w-full md:h-75 bg-transparent shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/20 "
+                className="w-full md:h-75 bg-transparent shadow-sm shadow-yellow-400/10 hover:shadow-yellow-400/20 "
               />
             </div>
           ))}

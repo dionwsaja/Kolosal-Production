@@ -45,7 +45,7 @@ function Footers() {
      
           <div>
             <p className="mb-4 text-xs tracking-widest text-white/40">
-              DETILED SERVICES
+              DETAILED SERVICES
             </p>
             <ul className="space-y-3 text-sm text-white/80">
               <li>Photography</li>
@@ -57,7 +57,7 @@ function Footers() {
 
           <div>
             <p className="mb-4 text-xs tracking-widest text-white/40">
-              COMPANY
+              PAGES
             </p>
             <ul className="space-y-3 text-sm text-white/80">
             <li>
@@ -91,7 +91,7 @@ function Footers() {
 
           <div>
             <p className="mb-4 text-xs tracking-widest text-white/40">
-              RESOURCES
+              COMPANY
             </p>
             <ul className="space-y-3 text-sm text-white/80">
               <li>Privacy Policy</li>
