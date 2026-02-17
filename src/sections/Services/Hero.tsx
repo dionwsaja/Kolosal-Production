@@ -20,7 +20,7 @@ export function Hero() {
           Our Services
         </h1>
         <p className="text-white/60 cursor-default text-center">
-          From idea to Impact
+          View Our Complete Services
         </p>
       </div>
     </div>
