@@ -38,10 +38,10 @@ export function Demo() {
       >
         <div ref={ref} className="relative z-10 w-full px-4 mb-12  ">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-center">
-          <span className="text-xl md:text-5xl mb-2 font-bold leading-tight max-w-7xl md:max-w-6xl gradient-text">
+          <span className="text-xl w-full md:w-auto md:text-5xl mb-2 font-bold leading-tight max-w-7xl md:max-w-6xl gradient-text">
             Let’s explore our contribution and witness <br className="hidden md:block"/> how we turn ideas into visual works that matter
           </span>
-          <p className=" text-xs md:text-lg text-white/60 max-w-6xl">
+          <p className=" text-xs w-full md:w-auto md:text-lg text-white/60 max-w-6xl">
             Kolosal Production is a creative partner for brands, events, and
             individuals who value meaning behind every visual. Backed by real
             field experience across national-scale projects, we craft visuals
