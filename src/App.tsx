@@ -7,6 +7,8 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
+import Privacy from "./pages/Privacy";
+import ComingSoon from "./pages/ComingSoon";
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/privacy" element={<Privacy />} />
-          <Route path="/coming-soon" element={<ComingSoon />} /> */}
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
