@@ -34,7 +34,7 @@ export function Demo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative min-h-screen flex flex-col items-center -mt-36 justify-center overflow-hidden w-full"
+        className="relative min-h-screen flex flex-col items-center -mt-36 md:-mt-0 justify-center overflow-hidden w-full"
       >
         <div ref={ref} className="relative z-10 w-full px-4 mb-12  ">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-center">
