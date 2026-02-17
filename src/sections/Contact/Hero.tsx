@@ -1,4 +1,4 @@
-import { BackgroundBeams } from "../../components/ui/background-beams";
+// import { BackgroundBeams } from "../../components/ui/background-beams";
 import ContactSection from "./ContactSection";
 import img from "../../assets/images/contact.png"
 
@@ -9,7 +9,7 @@ function Hero() {
         <img src={img} alt="img" className="w-full md:w-1/2 mb-16" />
         <ContactSection/>
       </div>
-      <BackgroundBeams className="absolute inset-0 z-0" />
+      {/* <BackgroundBeams className="absolute inset-0 z-0" /> */}
     </section>
   );
 }
