@@ -116,6 +116,7 @@ interface ImageLightboxProps {
   sourceRect: DOMRect | null;
   onCloseComplete?: () => void;
   onNavigate: (index: number) => void;
+  category?: string;
 }
 
 const ImageLightbox: React.FC<ImageLightboxProps> = ({
@@ -126,6 +127,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   sourceRect,
   onCloseComplete,
   onNavigate,
+  category,
 }) => {
   const [animationPhase, setAnimationPhase] = useState<
     "initial" | "animating" | "complete"
@@ -223,7 +225,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     if (!sourceRect) return {};
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    const targetWidth = Math.min(800, viewportWidth - 64);
+    const isMobile = viewportWidth < 768;
+    const targetWidth = Math.min(800, viewportWidth - (isMobile ? 32 : 64));
     const targetHeight = Math.min(viewportHeight * 0.85, 600);
     const targetX = (viewportWidth - targetWidth) / 2;
     const targetY = (viewportHeight - targetHeight) / 2;
@@ -261,7 +264,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   return (
     <div
       className={cn(
-        "fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8",
+        "fixed inset-0 z-50 flex items-center justify-center p-2 md:p-8",
       )}
       onClick={handleClose}
       style={{
@@ -303,7 +306,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         }}
         disabled={!hasPrev || isSliding}
         className={cn(
-          "absolute left-4 md:left-10 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-muted/30 backdrop-blur-xl border border-white/10 text-foreground hover:scale-110 active:scale-95 transition-all duration-300 disabled:opacity-0 disabled:pointer-events-none shadow-2xl",
+          "absolute left-2 md:left-10 z-50 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-muted/30 backdrop-blur-xl border border-white/10 text-foreground hover:scale-110 active:scale-95 transition-all duration-300 disabled:opacity-0 disabled:pointer-events-none shadow-2xl",
         )}
         style={{
           opacity:
@@ -316,7 +319,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             "opacity 400ms ease-out 600ms, transform 500ms cubic-bezier(0.16, 1, 0.3, 1) 600ms",
         }}
       >
-        <ChevronLeft className="w-6 h-6" strokeWidth={3} />
+        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
       </button>
       <button
         onClick={(e) => {
@@ -325,7 +328,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         }}
         disabled={!hasNext || isSliding}
         className={cn(
-          "absolute right-4 md:right-10 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-muted/30 backdrop-blur-xl border border-white/10 text-foreground hover:scale-110 active:scale-95 transition-all duration-300 disabled:opacity-0 disabled:pointer-events-none shadow-2xl",
+          "absolute right-2 md:right-10 z-50 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-muted/30 backdrop-blur-xl border border-white/10 text-foreground hover:scale-110 active:scale-95 transition-all duration-300 disabled:opacity-0 disabled:pointer-events-none shadow-2xl",
         )}
         style={{
           opacity:
@@ -338,7 +341,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             "opacity 400ms ease-out 600ms, transform 500ms cubic-bezier(0.16, 1, 0.3, 1) 600ms",
         }}
       >
-        <ChevronRight className="w-6 h-6" strokeWidth={3} />
+        <ChevronRight className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
       </button>
       <div
         ref={containerRef}
@@ -387,7 +390,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             </div>
           </div>
           <div
-            className={cn("px-8 py-7 bg-card border-t border-white/5")}
+            className={cn("px-4 py-4 md:px-8 md:py-7 bg-card border-t border-white/5")}
             style={{
               opacity: animationPhase === "complete" && !isClosing ? 1 : 0,
               transform:
@@ -398,19 +401,19 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
                 "opacity 500ms ease-out 500ms, transform 600ms cubic-bezier(0.16, 1, 0.3, 1) 500ms",
             }}
           >
-            <div className="flex items-center justify-between gap-6">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6">
               <div className="flex-1 min-w-0">
-                <h3 className="text-2xl font-bold text-foreground tracking-tight truncate">
+                <h3 className="text-lg md:text-2xl font-bold text-foreground tracking-tight truncate">
                   {currentProject?.title}
                 </h3>
-                <div className="flex items-center gap-4 mt-2">
-                  <div className="flex items-center gap-1.5 px-2.5 py-1 bg-muted rounded-full border border-white/5">
+                <div className="flex items-center gap-4 mt-1 md:mt-2">
+                  <div className="flex items-center gap-1.5 px-2 py-1 md:px-2.5 bg-muted rounded-full border border-white/5">
                     {projects.map((_, idx) => (
                       <button
                         key={idx}
                         onClick={() => handleDotClick(idx)}
                         className={cn(
-                          "w-1.5 h-1.5 rounded-full transition-all duration-500",
+                          "w-1 md:w-1.5 h-1 md:h-1.5 rounded-full transition-all duration-500",
                           idx === internalIndex
                             ? "bg-foreground scale-150"
                             : "bg-muted-foreground/30 hover:bg-muted-foreground/60",
@@ -418,19 +421,19 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
                       />
                     ))}
                   </div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground/60">
+                  <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground/60">
                     {internalIndex + 1} / {totalProjects}
                   </p>
                 </div>
               </div>
               <Link
-                to="/portfolio"
+                to={category ? `/portfolio?tab=${category}` : "/portfolio"}
                 className={cn(
-                  "flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-primary-foreground bg-primary hover:brightness-110 rounded-xl shadow-lg shadow-primary/20 transition-all duration-300 hover:scale-105 active:scale-95",
+                  "flex items-center justify-center gap-2 px-4 py-2.5 md:px-6 md:py-3 text-[10px] md:text-sm font-bold uppercase tracking-widest text-primary-foreground bg-primary hover:brightness-110 rounded-xl shadow-lg shadow-primary/20 transition-all duration-300 hover:scale-105 active:scale-95",
                 )}
               >
                 <span>View Full Projects</span>
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-3.5 h-3.5 md:w-4 md:h-4" />
               </Link>
             </div>
           </div>
@@ -446,6 +449,7 @@ interface AnimatedFolderProps {
   className?: string;
   gradient?: string;
   icon?: React.ReactNode;
+  category?: string;
 }
 
 const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
@@ -454,6 +458,7 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
   className,
   gradient,
   icon,
+  category,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -618,22 +623,18 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
             }}
           />
         </div>
-        <div className="text-center">
-          <h3
-            className="text-lg font-bold text-foreground mt-4 transition-all duration-500"
-            style={{
-              transform: isHovered ? "translateY(2px)" : "translateY(0)",
-              letterSpacing: isHovered ? "-0.01em" : "0",
-            }}
-          >
-            {title}
-          </h3>
-          {/* <p
-            className="text-sm font-medium text-muted-foreground transition-all duration-500"
-            style={{ opacity: isHovered ? 0.8 : 1 }}
-          >
-            {projects.length} {projects.length === 1 ? "project" : "projects"}
-          </p> */}
+        <div className="text-center w-full">
+          <div className="flex items-center justify-center min-h-[3.5rem] md:min-h-0">
+            <h3
+              className="text-lg font-bold text-foreground mt-4 transition-all duration-500"
+              style={{
+                transform: isHovered ? "translateY(2px)" : "translateY(0)",
+                letterSpacing: isHovered ? "-0.01em" : "0",
+              }}
+            >
+              {title}
+            </h3>
+          </div>
         </div>
       </div>
       <ImageLightbox
@@ -644,6 +645,7 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
         sourceRect={sourceRect}
         onCloseComplete={handleCloseComplete}
         onNavigate={handleNavigate}
+        category={category}
       />
     </>
   );
@@ -652,6 +654,7 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
 const portfolioData = [
   {
     title: "Event Documentation",
+    tab: "event",
     gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <Camera size={48} strokeWidth={1.5} />,
     projects: [
@@ -674,6 +677,7 @@ const portfolioData = [
   },
   {
     title: "Personal Demand",
+    tab: "personal",
     gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <User size={48} strokeWidth={1.5} />,
     projects: [
@@ -696,6 +700,7 @@ const portfolioData = [
   },
   {
     title: "Commercial & Product Design",
+    tab: "commercial",
     gradient: "linear-gradient(135deg, #6c4120, #f7d07f)",
     icon: <ShoppingBag size={48} strokeWidth={1.5} />,
     projects: [
@@ -718,6 +723,7 @@ const portfolioData = [
   },
   {
     title: "UI/UX & Web Development",
+    tab: "web",
     gradient: "linear-gradient(135deg, #6c4120, #f7d07f)  ",
     icon: <Code size={48} strokeWidth={1.5} />,
     projects: [
@@ -787,7 +793,8 @@ export default function App() {
                 projects={folder.projects}
                 gradient={folder.gradient}
                 icon={folder.icon}
-                className="w-full md:h-75 bg-transparent shadow-sm shadow-yellow-400/10 hover:shadow-yellow-400/20 "
+                category={folder.tab}
+                className="w-full md:h-75 bg-transparent shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/20 "
               />
             </div>
           ))}
