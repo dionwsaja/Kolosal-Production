@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="md:hidden flex flex-col gap-1"
+            className="md:hidden flex flex-col gap-1 cursor-pointer"
             onClick={() => setIsOpen(true)}
           >
             <span className="w-6 h-0.5 bg-white rounded" />
@@ -71,10 +71,17 @@ const Navbar = () => {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="fixed top-0 right-0 z-60 h-screen w-full bg-transparent backdrop-blur-md text-white px-8 py-24"
           >
+            <Link
+              to="/"
+              className="absolute top-8 left-8"
+              onClick={() => setIsOpen(false)}
+            >
+              <img src={logo} alt="logo Kolosal Production" className="w-28" />
+            </Link>
             <motion.button
               animate={controls}
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-3xl"
+              className="absolute top-6 right-6 text-3xl cursor-pointer"
             >
               ×
             </motion.button>

@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useForm } from "@formspree/react";
-import img from "../../assets/images/contact.png"
+
 
 const ContactSection = () => {
   const [state, handleSubmit] = useForm("mykdypwy");
@@ -11,7 +11,9 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2">
        
           <div className="p-8 md:p-14">
-            <img src={img} alt="" className="w-full"   />
+            <span className="text-3xl md:text-5xl gradient-text mb-8  font-bold text-center flex justify-center items-center">
+              Contact Us
+            </span>
 
             <p className="mt-6 max-w-md text-white/65 leading-relaxed">
               If you have any questions regarding our services or need help,
