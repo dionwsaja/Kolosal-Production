@@ -6,7 +6,7 @@ const PrivacyPolicy: React.FC = () => {
     <div className="min-h-screen bg-[#00030D] text-slate-300 font-sans selection:bg-red-900 selection:text-white">
       <header className="pt-48 pb-16 px-6 bg-[#00030D] ">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-4xl md:text-5xl font-bold gradient-text tracking-tight">
+          <span className="text-5xl md:text-7xl font-bold gradient-text tracking-tight">
             Privacy Policy
           </span>
           <p className="text-lg mt-4 text-slate-400">

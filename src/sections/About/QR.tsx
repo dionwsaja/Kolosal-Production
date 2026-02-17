@@ -7,7 +7,7 @@ const QR = () => {
   return (
     <section className="pt-36 bg-[#00030D] flex items-center justify-center px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold gradient-text mb-8 tracking-tight">
+        <h1 className="text-xl md:text-3xl font-semibold gradient-text mb-8 tracking-tight">
           Scan QR Code Below to Access Company Profile (PDF)
         </h1>
 

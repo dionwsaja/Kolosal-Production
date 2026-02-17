@@ -61,7 +61,7 @@ export function ValueProposition() {
       </ul>
     </div>
   );
-}
+} 
 
 interface GridItemProps {
   area: string;

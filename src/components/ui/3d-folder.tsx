@@ -771,7 +771,7 @@ export default function App() {
   return (
     <main className="bg-[#00030D] text-foreground transition-colors duration-500 selection:bg-accent/30 selection:text-accent-foreground pt-36 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-5xl font-black   mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <h1 className="text-5xl md:text-5xl font-black mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <span className="gradient-text text-3xl md:text-5xl">Our Core Services</span>
         </h1>
         <p className="text-white/60 text-lg max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">

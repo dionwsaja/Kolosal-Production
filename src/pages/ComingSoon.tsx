@@ -28,7 +28,7 @@ const ComingSoon: React.FC = () => {
           <span className="text-sm uppercase tracking-[0.3em] text-white/40 font-medium mb-4 block ">
             Future Expansion
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#6c4120] to-[#f7d07f] bg-clip-text text-transparent tracking-tight py-4">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#6c4120] to-[#f7d07f] bg-clip-text text-transparent tracking-tight py-4">
             Coming Soon
           </h1>
           <p className="text-lg mt-6 text-white/80 max-w-2xl mx-auto">

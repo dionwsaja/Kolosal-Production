@@ -40,10 +40,10 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="bg-[#00030D] text-white py-24">
+    <section className="bg-[#00030D] text-white py-32">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
-        <div className="mb-12 pt-24">
-          <span className="text-4xl gradient-text md:text-5xl font-bold">
+        <div className="mb-12 pt-32">
+          <span className="text-5xl gradient-text md:text-7xl font-bold">
             Our Portfolio
           </span>
           <p className="text-white/60 mt-2">

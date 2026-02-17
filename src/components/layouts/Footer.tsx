@@ -48,10 +48,10 @@ function Footers() {
               DETAILED SERVICES
             </span>
             <ul className="space-y-3 text-sm text-white/80 mt-4">
-              <li>Photography</li>
-              <li>Videography</li>
-              <li>Digital Production</li>
-              <li>Brand Visual</li>
+              <li>Event Documentation</li>
+              <li>Personal Demand</li>
+              <li>Commercial & Product Visual</li>
+              <li>UI/UX & Web Development</li>
             </ul>
           </div>
 
@@ -121,10 +121,10 @@ function Footers() {
             >
               <FaInstagram size={18} />
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="https://www.tiktok.com/@kolosalproduction" target="_blank" className="hover:text-white transition">
               <FaTiktok size={18} />
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="https://wa.me/6287836634387" target="_blank" className="hover:text-white transition">
               <FaWhatsapp size={18} />
             </a>
           </div>
