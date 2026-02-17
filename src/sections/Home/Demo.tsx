@@ -47,7 +47,7 @@ export function Demo() {
             field experience across national-scale projects, we craft visuals
             that don’t just look good, but represent identity with purpose.
           </p>
-          <div className="mt-10 flex flex-col md:flex-row gap-4 w-auto">
+          <div className="mt-10 flex flex-col md:flex-row gap-4 w-full md:w-auto">
             <Link
               to="/services"
             >
