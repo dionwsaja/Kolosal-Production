@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Sparkles, Sparkle } from "lucide-react";
+import { useAurora } from "../../providers/AuroraProvider";
 import logo from "../../assets/logo/logo.png";
 
 const Navbar = () => {
@@ -9,6 +10,7 @@ const Navbar = () => {
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const [isMobileMoreOpen, setIsMobileMoreOpen] = useState(false);
   const controls = useAnimation();
+  const { isAuroraEnabled, toggleAurora } = useAurora();
 
   useEffect(() => {
     if (isOpen) {
@@ -110,6 +112,18 @@ const Navbar = () => {
             <NavLink to="/contact" className={navLink}>
               Contact
             </NavLink>
+
+            <button
+              onClick={toggleAurora}
+              className="ml-2 p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-all duration-300 flex items-center justify-center border border-white/10 group active:scale-95"
+              title={isAuroraEnabled ? "Disable Aurora Background" : "Enable Aurora Background"}
+            >
+              {isAuroraEnabled ? (
+                <Sparkles size={18} className="text-yellow-400 animate-pulse" />
+              ) : (
+                <Sparkle size={18} className="text-white/40" />
+              )}
+            </button>
           </div>
 
           <button
@@ -230,6 +244,30 @@ const Navbar = () => {
               >
                 Contact
               </NavLink>
+
+              <div className="mt-4 flex items-center justify-end gap-3 px-2">
+                <span className="text-sm font-medium text-white/60">
+                  {isAuroraEnabled ? "Aurora Background On" : "Aurora Background Off"}
+                </span>
+                <button
+                  onClick={toggleAurora}
+                  className={`relative w-12 h-6 rounded-full transition-colors duration-300 border border-white/10 ${
+                    isAuroraEnabled ? "bg-orange-400" : "bg-white/5"
+                  }`}
+                >
+                  <motion.div
+                    animate={{ x: isAuroraEnabled ? 24 : 0 }}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    className="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md flex items-center justify-center"
+                  >
+                    {isAuroraEnabled ? (
+                      <Sparkles size={10} className="text-orange-400" />
+                    ) : (
+                      <Sparkle size={10} className="text-gray-400" />
+                    )}
+                  </motion.div>
+                </button>
+              </div>
             </nav>
           </motion.div>
         )}
