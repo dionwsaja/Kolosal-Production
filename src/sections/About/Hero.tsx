@@ -17,7 +17,7 @@ export function Hero() {
       </div>
       <div className="flex flex-col items-center justify-center gap-4 pt-32 relative z-20">
         <h1 className="md:text-7xl text-5xl  font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#f7d07f] to-[#6c4120]">
-          About Us
+          About Uss
         </h1>
         <p className="text-white/60 cursor-default text-center text-xs md:text-sm max-w-2xl md:max-w-5xl px-4">
         Kolosal Production is a youth-driven multimedia house that blends aesthetic storytelling with functional digital solutions. We transform your ideas into professional, high-impact works that authentically capture your identity. Backed by a Project Director with field experience for industry leaders like BUMN, Netflix, and Byon Combat, we bring elite technical standards and a modern, adaptive energy to every project we handle.
