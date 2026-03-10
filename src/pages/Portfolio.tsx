@@ -3,7 +3,6 @@ import PortfolioGallery from "../sections/Portfolio/PortfolioGallery";
 import QR from "../sections/Portfolio/QR";
 import { useSearchParams } from "react-router-dom";
 
-
 type TabType = "event" | "personal" | "commercial" | "web";
 
 const Portfolio = () => {
@@ -12,7 +11,10 @@ const Portfolio = () => {
 
   useEffect(() => {
     const tabParam = searchParams.get("tab") as TabType;
-    if (tabParam && ["event", "personal", "commercial", "web"].includes(tabParam)) {
+    if (
+      tabParam &&
+      ["event", "personal", "commercial", "web"].includes(tabParam)
+    ) {
       setActiveTab(tabParam);
     }
   }, [searchParams]);
@@ -66,9 +68,7 @@ const Portfolio = () => {
             </button>
           ))}
         </div>
-        <div className="w-full">
-          {renderGallery()}
-        </div>
+        <div className="w-full">{renderGallery()}</div>
         <QR />
       </div>
     </section>
