@@ -41,7 +41,7 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
   if (folder === "event") {
     names = [
       "BUMN",
-      "HMI",
+      "BPDHMI",
       "Discover Nusantara",
       "Belfest",
       "Byon Combat",
