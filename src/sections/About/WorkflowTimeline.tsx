@@ -7,12 +7,10 @@ export function WorkflowTimeline() {
       title: "01",
       content: (
         <div>
-          <h4 className="text-xl font-semibold mb-2">
-            Concept Consultation
-          </h4>
+          <h4 className="text-xl font-semibold mb-2">Concept Consultation</h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-            Needs assessment and concept consultation to align the workflow
-            and project references between the client and the Kolosal team.
+            Needs assessment and concept consultation to align the workflow and
+            project references between the client and the Kolosal team.
           </p>
         </div>
       ),
@@ -21,9 +19,7 @@ export function WorkflowTimeline() {
       title: "02",
       content: (
         <div>
-          <h4 className="text-xl font-semibold mb-2">
-            Quotation & MoU
-          </h4>
+          <h4 className="text-xl font-semibold mb-2">Quotation & MoU</h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
             Issuance of an official quotation, followed by submission of a
             detailed brief and the signing of a Memorandum of Understanding
@@ -36,12 +32,10 @@ export function WorkflowTimeline() {
       title: "03",
       content: (
         <div>
-          <h4 className="text-xl font-semibold mb-2">
-            Down Payment (DP)
-          </h4>
+          <h4 className="text-xl font-semibold mb-2">Down Payment (DP)</h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-            Payment of the first installment (down payment) via invoice,
-            with flexible payment scheme options.
+            Payment of the first installment (down payment) via invoice, with
+            flexible payment scheme options.
           </p>
         </div>
       ),
@@ -64,12 +58,10 @@ export function WorkflowTimeline() {
       title: "05",
       content: (
         <div>
-          <h4 className="text-xl font-semibold mb-2">
-            Final Payment
-          </h4>
+          <h4 className="text-xl font-semibold mb-2">Final Payment</h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-            Settlement of the remaining balance according to the agreed
-            payment scheme before entering the final stage.
+            Settlement of the remaining balance according to the agreed payment
+            scheme before entering the final stage.
           </p>
         </div>
       ),
@@ -78,13 +70,11 @@ export function WorkflowTimeline() {
       title: "06",
       content: (
         <div>
-          <h4 className="text-xl font-semibold mb-2">
-            Post-Production
-          </h4>
+          <h4 className="text-xl font-semibold mb-2">Post-Production</h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-            Post-production process with an estimated completion time of
-            [X] working days before the first deliverables are submitted
-            to the client.
+            Post-production process with an estimated completion time of [X]
+            working days before the first deliverables are submitted to the
+            client.
           </p>
         </div>
       ),
@@ -93,13 +83,11 @@ export function WorkflowTimeline() {
       title: "07",
       content: (
         <div>
-          <h4 className="text-xl font-semibold mb-2">
-            Review & Revision
-          </h4>
+          <h4 className="text-xl font-semibold mb-2">Review & Revision</h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-            Client review of the deliverables with a maximum of 1–2 rounds
-            of revisions as agreed (additional revisions will be subject
-            to extra charges).
+            Client review of the deliverables with a maximum of 1–2 rounds of
+            revisions as agreed (additional revisions will be subject to extra
+            charges).
           </p>
         </div>
       ),
@@ -112,8 +100,8 @@ export function WorkflowTimeline() {
             Final Delivery & Handover
           </h4>
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-            Delivery of all final assets (soft files / hard files) through
-            the agreed media as official project completion.
+            Delivery of all final assets (soft files / hard files) through the
+            agreed media as official project completion.
           </p>
         </div>
       ),

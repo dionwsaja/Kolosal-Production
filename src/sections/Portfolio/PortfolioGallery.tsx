@@ -104,6 +104,8 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
             <img
               src={img.src}
               alt={img.filename}
+              loading="lazy"
+              decoding="async"
               className={`
                 w-full
                 ${isEvent ? "object-cover" : ""}
@@ -124,8 +126,10 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
             imageElement = (
               <div className="relative">
                 {imageElement}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-center">
-                  <span className="text-white font-medium">{name}</span>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 py-2 md:p-4 text-center">
+                  <span className="text-white font-medium text-[10px] sm:text-xs md:text-sm leading-tight break-words">
+                    {name}
+                  </span>
                 </div>
               </div>
             );
