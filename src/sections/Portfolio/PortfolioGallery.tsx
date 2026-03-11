@@ -126,8 +126,9 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
             imageElement = (
               <div className="relative">
                 {imageElement}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 py-2 md:p-4 text-center">
-                  <span className="text-white font-medium text-[10px] sm:text-xs md:text-sm leading-tight break-words">
+
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 py-1.5 md:px-4 md:py-3 text-center">
+                  <span className="block text-white font-medium text-[10px] sm:text-xs md:text-sm leading-[1.1] whitespace-normal break-normal">
                     {name}
                   </span>
                 </div>
