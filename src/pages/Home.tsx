@@ -1,13 +1,13 @@
+import { Demo } from "../sections/Home/Demo";
 import CoreServices from "../sections/Home/CoreServices";
-import Testimonials from "../sections/Home/Testimonials";
 import { ValueProposition } from "../sections/Home/ValueProposition";
+import Testimonials from "../sections/Home/Testimonials";
 import Accordion from "../sections/Home/Accordion";
-import {Demo} from "../sections/Home/Demo";
 
 const Home = () => {
   return (
     <div className="bg-[#00030D]">
-      <Demo/>
+      <Demo />
       <CoreServices />
       <ValueProposition></ValueProposition>
       <Testimonials />

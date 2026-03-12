@@ -161,7 +161,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* MESSAGE */}
               <div>
                 <label className="mb-2 block text-xs font-bold uppercase tracking-widest text-white/40">
                   Message
@@ -175,7 +174,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* BUTTON */}
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
 

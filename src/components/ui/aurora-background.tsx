@@ -1,6 +1,5 @@
 import { cn } from "../../lib/utils";
 import React, { type ReactNode } from "react";
-import { useAurora } from "../../providers/AuroraProvider";
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
@@ -13,19 +12,17 @@ export const AuroraBackground = ({
   showRadialGradient = true,
   ...props
 }: AuroraBackgroundProps) => {
-  const { isAuroraEnabled } = useAurora();
   return (
     <main>
       <div
         className={cn(
           "relative flex  flex-col  h-[100vh] items-center justify-center bg-[#00030D]  text-slate-950 transition-bg",
-          className
+          className,
         )}
         {...props}
       >
         <div className="absolute inset-0 overflow-hidden">
           <div
-           
             className={cn(
               `
             [--white-gradient:repeating-linear-gradient(100deg,#ffffff_0%,#ffffff_7%,transparent_10%,transparent_12%,#ffffff_16%)]
@@ -41,10 +38,8 @@ export const AuroraBackground = ({
             pointer-events-none
             absolute -inset-[10px] opacity-50 will-change-transform`,
 
-              isAuroraEnabled && "after:animate-aurora",
-
               showRadialGradient &&
-                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]`
+                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]`,
             )}
           ></div>
         </div>

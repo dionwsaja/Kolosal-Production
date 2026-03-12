@@ -64,16 +64,7 @@
       height: 0;
     }
   }
-  --animate-aurora: aurora 60s linear infinite;
   --font-instrument-serif: var(----font-instrument-serif);
-  @keyframes aurora {
-    from {
-      background-position: 50% 50%, 50% 50%;
-    }
-    to {
-      background-position: 350% 50%, 350% 50%;
-    }
-  }
 }
 
 :root {
@@ -109,7 +100,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-instrument-serif: 'Instrument Serif', serif;
+  --font-instrument-serif: "Instrument Serif", serif;
 }
 
 .dark {
