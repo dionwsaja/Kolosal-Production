@@ -64,6 +64,8 @@ const AccordionItem = ({
       <img
         src={item.imageUrl}
         alt={item.title}
+        loading="lazy" // Optimasi: Menunda download gambar sampai terlihat di layar
+        decoding="async" // Optimasi: Memproses gambar tanpa memblokir render UI lainnya
         className="absolute inset-0 w-full h-full object-cover"
         onError={(e) => {
           const target = e.target as HTMLImageElement;

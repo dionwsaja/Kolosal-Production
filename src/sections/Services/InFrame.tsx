@@ -1,4 +1,4 @@
-import bg from "../../assets/images/frame.png"
+import bg from "../../assets/images/frame.png";
 
 export function InFrame() {
   return (
@@ -7,7 +7,7 @@ export function InFrame() {
         <span className="text-center gradient-text text-3xl font-bold md:text-5xl py-16">
           In Frame With Kolosal
         </span>
-        <img src={bg} alt="frame" className="w-full h-auto" />
+        <img src={bg} alt="frame" className="w-full h-auto" loading="lazy" />
       </div>
     </div>
   );

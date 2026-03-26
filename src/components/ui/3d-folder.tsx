@@ -6,7 +6,16 @@ import React, {
   useCallback,
   forwardRef,
 } from "react";
-import { X, ExternalLink, ChevronLeft, ChevronRight, Camera, User, ShoppingBag, Code } from "lucide-react";
+import {
+  X,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Camera,
+  User,
+  ShoppingBag,
+  Code,
+} from "lucide-react";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -390,7 +399,9 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             </div>
           </div>
           <div
-            className={cn("px-4 py-4 md:px-8 md:py-7 bg-card border-t border-white/5")}
+            className={cn(
+              "px-4 py-4 md:px-8 md:py-7 bg-card border-t border-white/5",
+            )}
             style={{
               opacity: animationPhase === "complete" && !isClosing ? 1 : 0,
               transform:
@@ -599,7 +610,8 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = ({
                 style={{
                   opacity: isHovered ? 0 : 1,
                   transform: isHovered ? "scale(0.7)" : "scale(1)",
-                  transition: "opacity 500ms cubic-bezier(0.16, 1, 0.3, 1), transform 500ms cubic-bezier(0.16, 1, 0.3, 1)",
+                  transition:
+                    "opacity 500ms cubic-bezier(0.16, 1, 0.3, 1), transform 500ms cubic-bezier(0.16, 1, 0.3, 1)",
                   color: "rgba(255, 255, 255, 0.9)",
                   filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3))",
                 }}
@@ -772,7 +784,9 @@ export default function App() {
     <main className="bg-[#00030D] text-foreground transition-colors duration-500 selection:bg-accent/30 selection:text-accent-foreground pt-36 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-5xl font-black mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <span className="gradient-text text-3xl md:text-5xl">Our Core Services</span>
+          <span className="gradient-text text-3xl md:text-5xl">
+            Our Core Services
+          </span>
         </h1>
         <p className="text-white/60 text-lg max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
           We help brands, events, and individuals translate ideas into impactful

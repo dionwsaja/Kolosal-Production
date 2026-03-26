@@ -1,7 +1,11 @@
-import { useState, useEffect } from "react";
-import PortfolioGallery from "../sections/Portfolio/PortfolioGallery";
+import { useState, useEffect, lazy, Suspense } from "react";
 import QR from "../sections/Portfolio/QR";
 import { useSearchParams } from "react-router-dom";
+
+// Implementasi impor dinamis untuk memecah beban komponen galeri
+const PortfolioGallery = lazy(
+  () => import("../sections/Portfolio/PortfolioGallery"),
+);
 
 type TabType = "event" | "personal" | "commercial" | "web";
 
@@ -52,6 +56,7 @@ const Portfolio = () => {
             Selected works based on our services
           </p>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 w-full max-w-4xl">
           {tabs.map((tab) => (
             <button
@@ -68,7 +73,22 @@ const Portfolio = () => {
             </button>
           ))}
         </div>
-        <div className="w-full">{renderGallery()}</div>
+
+        <div className="w-full min-h-[400px]">
+          {/* Suspense diwajibkan untuk menyediakan indikator visual saat komponen sedang diunduh */}
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center w-full h-full py-20">
+                <span className="text-[#f7d07f] animate-pulse text-lg">
+                  Memuat portofolio...
+                </span>
+              </div>
+            }
+          >
+            {renderGallery()}
+          </Suspense>
+        </div>
+
         <QR />
       </div>
     </section>
