@@ -41,7 +41,7 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
   if (folder === "event") {
     names = [
       "BUMN",
-      "BPDHMI",
+      "BPD HMI",
       "Discover Nusantara",
       "Belfest",
       "Byon Combat",
@@ -70,7 +70,7 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
     ];
   } else if (folder === "web") {
     groupSize = 1;
-    names = ["Profitara", "Minimiwaste", "Fusionlab", "Wedding Website"];
+    names = ["Profitara", "Minimiwaste", "Fusionlab", "Wedding Invitation"];
   }
 
   return (
@@ -127,7 +127,7 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({
               <div className="relative">
                 {imageElement}
 
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 py-1.5 md:px-4 md:py-3 text-center">
+                <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent px-2 py-1.5 md:px-4 md:py-3 text-center">
                   <span className="block text-white font-medium text-[10px] sm:text-xs md:text-sm leading-[1.1] whitespace-normal break-normal">
                     {name}
                   </span>
